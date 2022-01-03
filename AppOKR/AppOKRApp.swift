@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct AppOKRApp: App {
+    let viewModel: BooksViewModel = BooksViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: viewModel)
         }
     }
 }

@@ -15,4 +15,7 @@ struct ResultData: Codable {
     let copyright: String
     let country: String
     let icon: String
+    let updated: Date
+    let books: [Book]
+    let url: String
 }
