@@ -24,6 +24,11 @@
 		75F45762277F22DF005D16B3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F45761277F22DF005D16B3 /* Book.swift */; };
 		75F45764277F2363005D16B3 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F45763277F2363005D16B3 /* Genre.swift */; };
 		75F457662781E205005D16B3 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F457652781E205005D16B3 /* BooksViewModel.swift */; };
+		75F4576927876057005D16B3 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F4576827876057005D16B3 /* CollectionView.swift */; };
+		75F4576B278760DE005D16B3 /* CollectionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F4576A278760DE005D16B3 /* CollectionRowView.swift */; };
+		75F4576D27876221005D16B3 /* BookDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F4576C27876221005D16B3 /* BookDetails.swift */; };
+		75F4576F27876243005D16B3 /* BookListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F4576E27876243005D16B3 /* BookListCell.swift */; };
+		75F4577127876387005D16B3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F4577027876387005D16B3 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		75F45761277F22DF005D16B3 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		75F45763277F2363005D16B3 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		75F457652781E205005D16B3 /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
+		75F4576827876057005D16B3 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		75F4576A278760DE005D16B3 /* CollectionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionRowView.swift; sourceTree = "<group>"; };
+		75F4576C27876221005D16B3 /* BookDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetails.swift; sourceTree = "<group>"; };
+		75F4576E27876243005D16B3 /* BookListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListCell.swift; sourceTree = "<group>"; };
+		75F4577027876387005D16B3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +127,10 @@
 		689710AF276F564400C1F785 /* AppOKR */ = {
 			isa = PBXGroup;
 			children = (
+				75F457672787602E005D16B3 /* Views */,
 				689710E4276F765F00C1F785 /* Models */,
 				689710DB276F72B600C1F785 /* Netwoking */,
 				689710B0276F564400C1F785 /* AppOKRApp.swift */,
-				689710B2276F564400C1F785 /* ContentView.swift */,
 				689710B4276F565300C1F785 /* Assets.xcassets */,
 				689710B9276F565300C1F785 /* Info.plist */,
 				689710B6276F565300C1F785 /* Preview Content */,
@@ -177,6 +187,19 @@
 				75F45763277F2363005D16B3 /* Genre.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		75F457672787602E005D16B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				75F4576827876057005D16B3 /* CollectionView.swift */,
+				689710B2276F564400C1F785 /* ContentView.swift */,
+				75F4576A278760DE005D16B3 /* CollectionRowView.swift */,
+				75F4576C27876221005D16B3 /* BookDetails.swift */,
+				75F4576E27876243005D16B3 /* BookListCell.swift */,
+				75F4577027876387005D16B3 /* CollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,16 +333,21 @@
 			files = (
 				689710E3276F75D700C1F785 /* Api.swift in Sources */,
 				689710B3276F564400C1F785 /* ContentView.swift in Sources */,
+				75F4577127876387005D16B3 /* CollectionViewCell.swift in Sources */,
+				75F4576927876057005D16B3 /* CollectionView.swift in Sources */,
 				689710DF276F738E00C1F785 /* RequestProvider.swift in Sources */,
 				75F45764277F2363005D16B3 /* Genre.swift in Sources */,
 				75F45762277F22DF005D16B3 /* Book.swift in Sources */,
 				689710EA276F7D7B00C1F785 /* Author.swift in Sources */,
 				689710E6276F793800C1F785 /* Feed.swift in Sources */,
 				689710E8276F798E00C1F785 /* ResultData.swift in Sources */,
+				75F4576B278760DE005D16B3 /* CollectionRowView.swift in Sources */,
 				75F457662781E205005D16B3 /* BooksViewModel.swift in Sources */,
 				689710DD276F732100C1F785 /* Endpoint.swift in Sources */,
 				689710E1276F754F00C1F785 /* ApiError.swift in Sources */,
+				75F4576D27876221005D16B3 /* BookDetails.swift in Sources */,
 				689710B1276F564400C1F785 /* AppOKRApp.swift in Sources */,
+				75F4576F27876243005D16B3 /* BookListCell.swift in Sources */,
 				689710EC276F7DAB00C1F785 /* Link.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,7 +507,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AppOKR/Preview Content\"";
-				DEVELOPMENT_TEAM = R2479253XF;
+				DEVELOPMENT_TEAM = VB2SV633FD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppOKR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -501,7 +529,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AppOKR/Preview Content\"";
-				DEVELOPMENT_TEAM = R2479253XF;
+				DEVELOPMENT_TEAM = VB2SV633FD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppOKR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

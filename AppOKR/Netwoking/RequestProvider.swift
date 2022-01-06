@@ -9,7 +9,7 @@ import Foundation
 
 final class RequestProvider {
     
-    private let baseURL = "https://www.boredapi.com"
+    private let baseURL = "https://rss.applemarketingtools.com"
     private let timeoutInterval: TimeInterval = 30.0
     
     func request(_ endpoint: Endpoint) -> URLRequest {

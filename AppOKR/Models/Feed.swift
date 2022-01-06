@@ -8,5 +8,13 @@
 import Foundation
 
 struct Feed: Codable {
-    let data: ResultData
+    let title: String
+    let id: String
+    let author: Author
+    let links: [Link]
+    let copyright: String
+    let country: String
+    let icon: String
+    let updated: String
+    let results: [Book]
 }

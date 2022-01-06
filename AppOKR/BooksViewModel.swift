@@ -3,10 +3,12 @@
 //}
 
 import Combine
+import Foundation
+import SwiftUI
 
 final class BooksViewModel: ObservableObject {
-
-//    weak var viewControlle÷r: DashboardViewController?
+    @Published var books: [Book] = []
+    @Published var presentAlert: Bool = false
     private let api: Api
     private var cancellationToken: AnyCancellable?
 
@@ -15,17 +17,18 @@ final class BooksViewModel: ObservableObject {
         fetchDogsFacts()
     }
 
-    private func fetchDogsFacts() {
+    func fetchDogsFacts() {
         cancellationToken = api.fetchBooks()
-                .sink(receiveCompletion: { (completion) in
+                .receive(on: RunLoop.main)
+                .sink(receiveCompletion: { [weak self] completion in
                     switch completion {
-                    case .failure(let error):
-                        print("ERROR \(error)")
+                    case .failure:
+                        self?.presentAlert = true
                     case .finished:
                         print("DONE - postUserPublisher")
                     }
-                }, receiveValue: { dog in
-                    print("RECEIVED VALUE: \(dog)")
+                }, receiveValue: { [weak self] resultData in
+                    self?.books = resultData.feed.results
                 })
     }
 }

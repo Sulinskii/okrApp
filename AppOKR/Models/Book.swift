@@ -15,6 +15,7 @@ struct Book: Codable, Identifiable {
     let kind: String
     let artistId: String
     let artistUrl: String
-    let artistUrl100: String
+    let artworkUrl100: String
     let genres: [Genre]
+    let url: String
 }

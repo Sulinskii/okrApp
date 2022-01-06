@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import UIKit
 
 final class Api {
     
@@ -18,16 +19,15 @@ final class Api {
         self.requestProvider = requestProvider
     }
     
-    func fetchBooks() -> AnyPublisher<Feed, Error> {
+    func fetchBooks() -> AnyPublisher<ResultData, Error> {
         let endpoint = booksEndpoint()
         let request = requestProvider.request(endpoint)
 
         return session.dataTaskPublisher(for: request)
                 .tryMap{ try self.validate($0.data, $0.response)}
-                .decode(type: Feed.self, decoder: decoder)
+                .decode(type: ResultData.self, decoder: decoder)
                 .eraseToAnyPublisher()
-        }
-    
+    }
 }
 
 private extension Api {
@@ -37,7 +37,7 @@ private extension Api {
             "cache-control": "no-cache",
         ]
 
-        return Endpoint(method: .get, params: nil, headers: headers, encoding: .jsonEncoding, path: "bla")
+        return Endpoint(method: .get, params: nil, headers: headers, encoding: .jsonEncoding, path: "/api/v2/us/books/top-free/10/books.json")
     }
 }
 
