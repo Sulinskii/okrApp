@@ -30,7 +30,6 @@ struct CollectionView: View {
     func buildView(rowIndex: Int, geometry: GeometryProxy) -> RowView? {
         var rowBooks = [Book]()
         for itemIndex in 0..<Int(itemPerRow) {
-            // 8. Check if got two item in counts, then insert it properly
             if rowIndex + itemIndex < books.count {
                 rowBooks.append(books[rowIndex + itemIndex])
             }

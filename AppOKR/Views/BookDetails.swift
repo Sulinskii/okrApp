@@ -6,14 +6,51 @@
 //
 
 import SwiftUI
-
+import WebKit
 
 struct BookDetails: View {
     let book: Book
+    @State private var isActive = false
     var body: some View {
         NavigationView {
             Text(book.releaseDate)
+            Button("Website") {
+                isActive = true
+            }
+            
         }
+        .navigationTitle(book.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
+
+struct WebView : UIViewRepresentable {
+    
+    let request: URLRequest
+    
+    func makeUIView(context: Context) -> WKWebView  {
+        return WKWebView()
+    }
+    
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        uiView.load(request)
+    }
+    
+}
+
+class WebViewModel: ObservableObject {
+    let webView: WKWebView
+    let url: URL
+    
+    init(urlString: String) {
+        webView = WKWebView(frame: .zero)
+        url = URL(string: urlString)!
+
+        loadUrl()
+    }
+    
+    func loadUrl() {
+        webView.load(URLRequest(url: url))
+    }
+}
