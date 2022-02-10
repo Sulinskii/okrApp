@@ -20,8 +20,18 @@ final class Api {
     
     func fetchBooks() -> AnyPublisher<ResultData, Error> {
         let endpoint = booksEndpoint()
-        let request = requestProvider.request(endpoint)
+        let request = requestProvider.request(for: endpoint)
 
+        return session.dataTaskPublisher(for: request)
+                .tryMap{ try self.validate($0.data, $0.response)}
+                .decode(type: ResultData.self, decoder: decoder)
+                .eraseToAnyPublisher()
+    }
+    
+    func fetchPodcasts() -> AnyPublisher<ResultData, Error> {
+        let endpoint = podcastsEndpoint()
+        let request = requestProvider.request(for: endpoint)
+        
         return session.dataTaskPublisher(for: request)
                 .tryMap{ try self.validate($0.data, $0.response)}
                 .decode(type: ResultData.self, decoder: decoder)
@@ -31,6 +41,15 @@ final class Api {
 
 private extension Api {
     func booksEndpoint() -> Endpoint {
+        let headers = [
+            "Content-Type": "application/json",
+            "cache-control": "no-cache",
+        ]
+
+        return Endpoint(method: .get, params: nil, headers: headers, encoding: .jsonEncoding, path: "/api/v2/us/books/top-free/10/books.json")
+    }
+    
+    func podcastsEndpoint() -> Endpoint {
         let headers = [
             "Content-Type": "application/json",
             "cache-control": "no-cache",

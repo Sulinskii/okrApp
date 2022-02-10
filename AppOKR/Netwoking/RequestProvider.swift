@@ -12,7 +12,7 @@ final class RequestProvider {
     private let baseURL = "https://rss.applemarketingtools.com"
     private let timeoutInterval: TimeInterval = 30.0
     
-    func request(_ endpoint: Endpoint) -> URLRequest {
+    func request(for endpoint: Endpoint) -> URLRequest {
         let url = URL(string: baseURL + endpoint.path)!
 
         var request = URLRequest(url: url,
