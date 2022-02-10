@@ -1,10 +1,5 @@
-//protocol BooksViewModelProtocol: AnyObject {
-//    var viewController: DashboardViewController? { get set }
-//}
-
 import Combine
 import Foundation
-import SwiftUI
 
 final class BooksViewModel: ObservableObject {
     @Published var books: [Book] = []
