@@ -6,13 +6,21 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct AppOKRApp: App {
-    let viewModel: BooksViewModel = BooksViewModel()
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
+    let viewModel = SignInViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView(viewModel: viewModel)
         }
     }
 }
+
+

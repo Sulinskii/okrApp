@@ -1,14 +1,16 @@
 //
-//  ContentView.swift
+//  DashboardView.swift
 //  AppOKR
 //
-//  Created by Artur Sulinski on 19/12/2021.
+//  Created by Artur Sulinski on 20/03/2022.
 //
 
+import Foundation
 import SwiftUI
 
-struct ContentView: View {
-    @ObservedObject var viewModel: BooksViewModel
+struct DashboardView: View {
+    @ObservedObject var viewModel = BooksViewModel()
+    
     var body: some View {
         NavigationView {
             TabView {
@@ -32,13 +34,5 @@ struct ContentView: View {
                         viewModel.fetchBooks()
                     }))
             }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ContentView(viewModel: .init())
-        }
     }
 }
