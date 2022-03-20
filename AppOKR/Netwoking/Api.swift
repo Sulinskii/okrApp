@@ -9,10 +9,13 @@ import Foundation
 import Combine
 
 final class Api {
+    public static let shared = Api()
     
     private let session = URLSession.shared
     private let decoder = JSONDecoder()
     private let requestProvider: RequestProvider
+    private let scheduler = DispatchQueue.global()
+    private let numberOfRetries = 3
     
     init(requestProvider: RequestProvider = RequestProvider()) {
         self.requestProvider = requestProvider
@@ -22,19 +25,26 @@ final class Api {
         let endpoint = booksEndpoint()
         let request = requestProvider.request(for: endpoint)
 
-        return session.dataTaskPublisher(for: request)
-                .tryMap{ try self.validate($0.data, $0.response)}
-                .decode(type: ResultData.self, decoder: decoder)
-                .eraseToAnyPublisher()
+        return dataPublisher(type: ResultData.self, request: request)
     }
     
     func fetchPodcasts() -> AnyPublisher<ResultData, Error> {
         let endpoint = podcastsEndpoint()
         let request = requestProvider.request(for: endpoint)
         
-        return session.dataTaskPublisher(for: request)
+        return dataPublisher(type: ResultData.self, request: request)
+    }
+    
+    func dataPublisher<T: Decodable>(type: T.Type, request: URLRequest) -> AnyPublisher<T, Error> {
+        session.dataTaskPublisher(for: request)
                 .tryMap{ try self.validate($0.data, $0.response)}
-                .decode(type: ResultData.self, decoder: decoder)
+                .decode(type: type, decoder: decoder)
+                .catch{ (error: Error) -> AnyPublisher<T, Error> in
+                    return Fail(error: error)
+                            .delay(for: 3, scheduler: self.scheduler)
+                            .eraseToAnyPublisher()
+                }
+                .retry(numberOfRetries)
                 .eraseToAnyPublisher()
     }
 }
@@ -55,7 +65,7 @@ private extension Api {
             "cache-control": "no-cache",
         ]
 
-        return Endpoint(method: .get, params: nil, headers: headers, encoding: .jsonEncoding, path: "/api/v2/us/books/top-free/10/books.json")
+        return Endpoint(method: .get, params: nil, headers: headers, encoding: .jsonEncoding, path: "/api/v2/us/podcasts/top/10/podcast-episodes.json")
     }
 }
 
@@ -65,6 +75,7 @@ private extension Api {
             throw APIError.invalidResponse
         }
         guard (200..<300).contains(httpResponse.statusCode) else {
+            print("ERROR")
             throw APIError.statusCode(httpResponse.statusCode)
         }
         return data

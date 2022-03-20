@@ -17,7 +17,7 @@ struct ContentView: View {
                 }.tabItem {
                     Text("List view")
                 }
-                CollectionView(books: viewModel.books)
+                CollectionView(books: viewModel.podcasts)
                     .tabItem {
                         Text("Collection view")
                     }
@@ -29,7 +29,7 @@ struct ContentView: View {
                     message: Text("Please try again"),
                     dismissButton: .default(Text("Okay"), action: {
                         viewModel.presentAlert = false
-                        viewModel.fetchDogsFacts()
+                        viewModel.fetchBooks()
                     }))
             }
     }

@@ -11,10 +11,10 @@ struct Book: Codable, Identifiable {
     let artistName: String
     let id: String
     let name: String
-    let releaseDate: String
+    @CodableDefault.EmptyString var releaseDate: String
     let kind: String
-    let artistId: String
-    let artistUrl: String
+    @CodableDefault.EmptyString var artistId: String
+    @CodableDefault.EmptyString var artistUrl: String
     let artworkUrl100: String
     let genres: [Genre]
     let url: String

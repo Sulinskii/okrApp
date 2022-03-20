@@ -9,6 +9,7 @@ import SwiftUI
 import WebKit
 
 struct BookDetails: View {
+    private let viewModel = BookDetailsViewModel()
     let book: Book
     @State private var isActive = false
     var body: some View {
@@ -21,6 +22,9 @@ struct BookDetails: View {
         }
         .navigationTitle(book.name)
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            viewModel.updateWidgetData(with: book.name)
+        }
     }
 }
 

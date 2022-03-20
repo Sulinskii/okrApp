@@ -8,7 +8,7 @@
 import Foundation
 
 struct Genre: Codable {
-    let genreId: String
     let name: String
-    let url: String
+    @CodableDefault.EmptyString var genreId: String
+    @CodableDefault.EmptyString var url: String
 }

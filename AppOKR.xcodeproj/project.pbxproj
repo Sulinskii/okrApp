@@ -21,6 +21,16 @@
 		689710E8276F798E00C1F785 /* ResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689710E7276F798E00C1F785 /* ResultData.swift */; };
 		689710EA276F7D7B00C1F785 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689710E9276F7D7B00C1F785 /* Author.swift */; };
 		689710EC276F7DAB00C1F785 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689710EB276F7DAB00C1F785 /* Link.swift */; };
+		7517FFD027DE515B00A884BD /* CodableDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7517FFCF27DE515B00A884BD /* CodableDefault.swift */; };
+		7517FFD327DE5BA300A884BD /* Retry+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7517FFD227DE5BA300A884BD /* Retry+Additions.swift */; };
+		758026D327E60DDF00910A2F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752CB31127E5FF760095669A /* WidgetKit.framework */; };
+		758026D427E60DDF00910A2F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752CB31327E5FF760095669A /* SwiftUI.framework */; };
+		758026D727E60DDF00910A2F /* AppOKRWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026D627E60DDF00910A2F /* AppOKRWidget.swift */; };
+		758026D927E60DE000910A2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758026D827E60DE000910A2F /* Assets.xcassets */; };
+		758026DD27E60DE000910A2F /* AppOKRWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 758026D227E60DDF00910A2F /* AppOKRWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		758026E427E630E000910A2F /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026E327E630E000910A2F /* AppGroup.swift */; };
+		758026E627E7213B00910A2F /* AppOKRWidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026E527E7213B00910A2F /* AppOKRWidgetViewModel.swift */; };
+		758026E827E722C100910A2F /* BookDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026E727E722C100910A2F /* BookDetailsViewModel.swift */; };
 		75F45762277F22DF005D16B3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F45761277F22DF005D16B3 /* Book.swift */; };
 		75F45764277F2363005D16B3 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F45763277F2363005D16B3 /* Genre.swift */; };
 		75F457662781E205005D16B3 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F457652781E205005D16B3 /* BooksViewModel.swift */; };
@@ -46,7 +56,28 @@
 			remoteGlobalIDString = 689710AC276F564400C1F785;
 			remoteInfo = AppOKR;
 		};
+		758026DB27E60DE000910A2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 689710A5276F564400C1F785 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 758026D127E60DDF00910A2F;
+			remoteInfo = AppOKRWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		752CB32127E5FF770095669A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				758026DD27E60DE000910A2F /* AppOKRWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		689710AD276F564400C1F785 /* AppOKR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppOKR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +100,19 @@
 		689710E7276F798E00C1F785 /* ResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultData.swift; sourceTree = "<group>"; };
 		689710E9276F7D7B00C1F785 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		689710EB276F7DAB00C1F785 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		7517FFCF27DE515B00A884BD /* CodableDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableDefault.swift; sourceTree = "<group>"; };
+		7517FFD227DE5BA300A884BD /* Retry+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Retry+Additions.swift"; sourceTree = "<group>"; };
+		752CB31127E5FF760095669A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		752CB31327E5FF760095669A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		758026D227E60DDF00910A2F /* AppOKRWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AppOKRWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		758026D627E60DDF00910A2F /* AppOKRWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOKRWidget.swift; sourceTree = "<group>"; };
+		758026D827E60DE000910A2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		758026DA27E60DE000910A2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		758026E127E62D4300910A2F /* AppOKR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppOKR.entitlements; sourceTree = "<group>"; };
+		758026E227E62D9300910A2F /* AppOKRWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppOKRWidgetExtension.entitlements; sourceTree = "<group>"; };
+		758026E327E630E000910A2F /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		758026E527E7213B00910A2F /* AppOKRWidgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOKRWidgetViewModel.swift; sourceTree = "<group>"; };
+		758026E727E722C100910A2F /* BookDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewModel.swift; sourceTree = "<group>"; };
 		75F45761277F22DF005D16B3 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		75F45763277F2363005D16B3 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		75F457652781E205005D16B3 /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
@@ -101,15 +145,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		758026CF27E60DDF00910A2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				758026D427E60DDF00910A2F /* SwiftUI.framework in Frameworks */,
+				758026D327E60DDF00910A2F /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		689710A4276F564400C1F785 = {
 			isa = PBXGroup;
 			children = (
+				758026E227E62D9300910A2F /* AppOKRWidgetExtension.entitlements */,
 				689710AF276F564400C1F785 /* AppOKR */,
 				689710C1276F565300C1F785 /* AppOKRTests */,
 				689710CC276F565300C1F785 /* AppOKRUITests */,
+				758026D527E60DDF00910A2F /* AppOKRWidget */,
+				752CB31027E5FF760095669A /* Frameworks */,
 				689710AE276F564400C1F785 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,6 +176,7 @@
 				689710AD276F564400C1F785 /* AppOKR.app */,
 				689710BE276F565300C1F785 /* AppOKRTests.xctest */,
 				689710C9276F565300C1F785 /* AppOKRUITests.xctest */,
+				758026D227E60DDF00910A2F /* AppOKRWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +184,9 @@
 		689710AF276F564400C1F785 /* AppOKR */ = {
 			isa = PBXGroup;
 			children = (
+				758026E127E62D4300910A2F /* AppOKR.entitlements */,
+				7517FFD127DE5B7400A884BD /* Extensions */,
+				7517FFCE27DE514200A884BD /* Utils */,
 				75F457672787602E005D16B3 /* Views */,
 				689710E4276F765F00C1F785 /* Models */,
 				689710DB276F72B600C1F785 /* Netwoking */,
@@ -135,6 +195,7 @@
 				689710B9276F565300C1F785 /* Info.plist */,
 				689710B6276F565300C1F785 /* Preview Content */,
 				75F457652781E205005D16B3 /* BooksViewModel.swift */,
+				758026E727E722C100910A2F /* BookDetailsViewModel.swift */,
 			);
 			path = AppOKR;
 			sourceTree = "<group>";
@@ -189,6 +250,43 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		7517FFCE27DE514200A884BD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7517FFCF27DE515B00A884BD /* CodableDefault.swift */,
+				758026E327E630E000910A2F /* AppGroup.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7517FFD127DE5B7400A884BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7517FFD227DE5BA300A884BD /* Retry+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		752CB31027E5FF760095669A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				752CB31127E5FF760095669A /* WidgetKit.framework */,
+				752CB31327E5FF760095669A /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		758026D527E60DDF00910A2F /* AppOKRWidget */ = {
+			isa = PBXGroup;
+			children = (
+				758026D627E60DDF00910A2F /* AppOKRWidget.swift */,
+				758026D827E60DE000910A2F /* Assets.xcassets */,
+				758026DA27E60DE000910A2F /* Info.plist */,
+				758026E527E7213B00910A2F /* AppOKRWidgetViewModel.swift */,
+			);
+			path = AppOKRWidget;
+			sourceTree = "<group>";
+		};
 		75F457672787602E005D16B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,10 +310,12 @@
 				689710A9276F564400C1F785 /* Sources */,
 				689710AA276F564400C1F785 /* Frameworks */,
 				689710AB276F564400C1F785 /* Resources */,
+				752CB32127E5FF770095669A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				758026DC27E60DE000910A2F /* PBXTargetDependency */,
 			);
 			name = AppOKR;
 			productName = AppOKR;
@@ -258,13 +358,30 @@
 			productReference = 689710C9276F565300C1F785 /* AppOKRUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		758026D127E60DDF00910A2F /* AppOKRWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 758026DE27E60DE000910A2F /* Build configuration list for PBXNativeTarget "AppOKRWidgetExtension" */;
+			buildPhases = (
+				758026CE27E60DDF00910A2F /* Sources */,
+				758026CF27E60DDF00910A2F /* Frameworks */,
+				758026D027E60DDF00910A2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppOKRWidgetExtension;
+			productName = AppOKRWidgetExtension;
+			productReference = 758026D227E60DDF00910A2F /* AppOKRWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		689710A5276F564400C1F785 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					689710AC276F564400C1F785 = {
@@ -277,6 +394,9 @@
 					689710C8276F565300C1F785 = {
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = 689710AC276F564400C1F785;
+					};
+					758026D127E60DDF00910A2F = {
+						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
@@ -296,6 +416,7 @@
 				689710AC276F564400C1F785 /* AppOKR */,
 				689710BD276F565300C1F785 /* AppOKRTests */,
 				689710C8276F565300C1F785 /* AppOKRUITests */,
+				758026D127E60DDF00910A2F /* AppOKRWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -324,6 +445,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		758026D027E60DDF00910A2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				758026D927E60DE000910A2F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -331,21 +460,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7517FFD327DE5BA300A884BD /* Retry+Additions.swift in Sources */,
 				689710E3276F75D700C1F785 /* Api.swift in Sources */,
 				689710B3276F564400C1F785 /* ContentView.swift in Sources */,
 				75F4577127876387005D16B3 /* CollectionViewCell.swift in Sources */,
 				75F4576927876057005D16B3 /* CollectionView.swift in Sources */,
+				758026E827E722C100910A2F /* BookDetailsViewModel.swift in Sources */,
 				689710DF276F738E00C1F785 /* RequestProvider.swift in Sources */,
 				75F45764277F2363005D16B3 /* Genre.swift in Sources */,
 				75F45762277F22DF005D16B3 /* Book.swift in Sources */,
 				689710EA276F7D7B00C1F785 /* Author.swift in Sources */,
 				689710E6276F793800C1F785 /* Feed.swift in Sources */,
+				758026E427E630E000910A2F /* AppGroup.swift in Sources */,
 				689710E8276F798E00C1F785 /* ResultData.swift in Sources */,
 				75F4576B278760DE005D16B3 /* CollectionRowView.swift in Sources */,
 				75F457662781E205005D16B3 /* BooksViewModel.swift in Sources */,
 				689710DD276F732100C1F785 /* Endpoint.swift in Sources */,
 				689710E1276F754F00C1F785 /* ApiError.swift in Sources */,
 				75F4576D27876221005D16B3 /* BookDetails.swift in Sources */,
+				7517FFD027DE515B00A884BD /* CodableDefault.swift in Sources */,
 				689710B1276F564400C1F785 /* AppOKRApp.swift in Sources */,
 				75F4576F27876243005D16B3 /* BookListCell.swift in Sources */,
 				689710EC276F7DAB00C1F785 /* Link.swift in Sources */,
@@ -368,6 +501,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		758026CE27E60DDF00910A2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				758026D727E60DDF00910A2F /* AppOKRWidget.swift in Sources */,
+				758026E627E7213B00910A2F /* AppOKRWidgetViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -380,6 +522,11 @@
 			isa = PBXTargetDependency;
 			target = 689710AC276F564400C1F785 /* AppOKR */;
 			targetProxy = 689710CA276F565300C1F785 /* PBXContainerItemProxy */;
+		};
+		758026DC27E60DE000910A2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 758026D127E60DDF00910A2F /* AppOKRWidgetExtension */;
+			targetProxy = 758026DB27E60DE000910A2F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -503,8 +650,10 @@
 		689710D3276F565300C1F785 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppOKR/AppOKR.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AppOKR/Preview Content\"";
 				DEVELOPMENT_TEAM = VB2SV633FD;
@@ -525,8 +674,10 @@
 		689710D4276F565300C1F785 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppOKR/AppOKR.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AppOKR/Preview Content\"";
 				DEVELOPMENT_TEAM = VB2SV633FD;
@@ -628,6 +779,66 @@
 			};
 			name = Release;
 		};
+		758026DF27E60DE000910A2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = AppOKRWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VB2SV633FD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppOKRWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AppOKRWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appokr.AppOKR.AppOKRWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		758026E027E60DE000910A2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = AppOKRWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VB2SV633FD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppOKRWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AppOKRWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appokr.AppOKR.AppOKRWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -663,6 +874,15 @@
 			buildConfigurations = (
 				689710D9276F565300C1F785 /* Debug */,
 				689710DA276F565300C1F785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		758026DE27E60DE000910A2F /* Build configuration list for PBXNativeTarget "AppOKRWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				758026DF27E60DE000910A2F /* Debug */,
+				758026E027E60DE000910A2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
