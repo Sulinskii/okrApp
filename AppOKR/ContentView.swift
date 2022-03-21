@@ -9,14 +9,15 @@ import SwiftUI
 import FirebaseAuth
 
 struct ContentView: View {
-    @ObservedObject var viewModel: SignInViewModel
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
+        let viewModel = AuthViewModel()
         NavigationView {
             if viewModel.signedIn {
-                SignInView(viewModel: viewModel)
-            } else {
                 DashboardView()
+            } else {
+                SignInView()
             }
         }.onAppear {
             viewModel.signedIn = viewModel.isSignedIn
@@ -28,7 +29,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView(viewModel: .init())
+            ContentView()
         }
     }
 }

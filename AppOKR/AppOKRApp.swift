@@ -11,16 +11,21 @@ import Firebase
 @main
 struct AppOKRApp: App {
     
-    init() {
-        FirebaseApp.configure()
-    }
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    let viewModel = SignInViewModel()
     var body: some Scene {
+        let viewModel = AuthViewModel()
         WindowGroup {
-            ContentView(viewModel: viewModel)
+            ContentView()
+                .environmentObject(viewModel)
         }
     }
 }
 
+final class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        return true
+    }
+}
 

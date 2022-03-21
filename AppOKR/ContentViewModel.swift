@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import FirebaseAuth
 
 public class ContentViewModel {
     

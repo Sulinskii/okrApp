@@ -12,10 +12,15 @@ struct SignUpView: View {
     @State var login: String = ""
     @State var password: String = ""
     
-    let viewModel: SignInViewModel
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
-        NavigationView {
+        VStack {
+            Image("MainIcon")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
+            
             VStack {
                 TextField("Enter your email address here", text: $login)
                     .textFieldStyle(.roundedBorder)
@@ -23,21 +28,20 @@ struct SignUpView: View {
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                     .keyboardType(.emailAddress)
+                
                 SecureField("Enter your password here", text: $password)
                     .textFieldStyle(.roundedBorder)
                     .padding()
-            
-                Button(action: {
+                
+                Button("Sign Up") {
                     viewModel.signUp(with: login, and: password)
-                }, label: {
-                    Text("Sign Up")
-                        .foregroundColor(.black)
-                        .background(Color.blue)
-                        .frame(width: 200, height: 50, alignment: .center)
-                        .cornerRadius(8)
-                })
-                .navigationTitle("Create Account")
+                }
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.blue)
+                .cornerRadius(8)
             }
         }
+        .navigationTitle("Sign Up")
     }
 }

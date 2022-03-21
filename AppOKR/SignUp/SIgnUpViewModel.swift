@@ -6,10 +6,10 @@
 //
 
 import Foundation
-import FirebaseAuth
+//import FirebaseAuth
 
 public class SignUpViewModel {
-    private let auth = Auth.auth()
+//    private let auth = Auth.auth()
     
     
 }

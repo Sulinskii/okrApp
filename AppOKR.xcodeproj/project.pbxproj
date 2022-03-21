@@ -31,7 +31,7 @@
 		758026E627E7213B00910A2F /* AppOKRWidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026E527E7213B00910A2F /* AppOKRWidgetViewModel.swift */; };
 		758026E827E722C100910A2F /* BookDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026E727E722C100910A2F /* BookDetailsViewModel.swift */; };
 		758026EA27E77C8600910A2F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026E927E77C8600910A2F /* SignInView.swift */; };
-		758026EC27E77C9600910A2F /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026EB27E77C9600910A2F /* SignInViewModel.swift */; };
+		758026EC27E77C9600910A2F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026EB27E77C9600910A2F /* AuthViewModel.swift */; };
 		758026F327E78FF100910A2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 758026F227E78FF000910A2F /* GoogleService-Info.plist */; };
 		758026F627E7906900910A2F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 758026F527E7906900910A2F /* FirebaseAnalytics */; };
 		758026F827E7906900910A2F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 758026F727E7906900910A2F /* FirebaseAuth */; };
@@ -121,7 +121,7 @@
 		758026E527E7213B00910A2F /* AppOKRWidgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOKRWidgetViewModel.swift; sourceTree = "<group>"; };
 		758026E727E722C100910A2F /* BookDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewModel.swift; sourceTree = "<group>"; };
 		758026E927E77C8600910A2F /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		758026EB27E77C9600910A2F /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		758026EB27E77C9600910A2F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		758026F227E78FF000910A2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		758026F927E7AC3C00910A2F /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		758026FB27E7ADDD00910A2F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
@@ -200,8 +200,8 @@
 		689710AF276F564400C1F785 /* AppOKR */ = {
 			isa = PBXGroup;
 			children = (
-				758026FD27E7AF2100910A2F /* SignIn */,
 				758026F227E78FF000910A2F /* GoogleService-Info.plist */,
+				758026FD27E7AF2100910A2F /* SignIn */,
 				758026EE27E77CCA00910A2F /* Dashboard */,
 				758026ED27E77CA700910A2F /* BookDetails */,
 				758026E127E62D4300910A2F /* AppOKR.entitlements */,
@@ -328,7 +328,7 @@
 		758026FD27E7AF2100910A2F /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				758026EB27E77C9600910A2F /* SignInViewModel.swift */,
+				758026EB27E77C9600910A2F /* AuthViewModel.swift */,
 				758026E927E77C8600910A2F /* SignInView.swift */,
 			);
 			path = SignIn;
@@ -531,7 +531,7 @@
 				758026E427E630E000910A2F /* AppGroup.swift in Sources */,
 				689710E8276F798E00C1F785 /* ResultData.swift in Sources */,
 				75F4576B278760DE005D16B3 /* CollectionRowView.swift in Sources */,
-				758026EC27E77C9600910A2F /* SignInViewModel.swift in Sources */,
+				758026EC27E77C9600910A2F /* AuthViewModel.swift in Sources */,
 				75F457662781E205005D16B3 /* BooksViewModel.swift in Sources */,
 				689710DD276F732100C1F785 /* Endpoint.swift in Sources */,
 				689710E1276F754F00C1F785 /* ApiError.swift in Sources */,
