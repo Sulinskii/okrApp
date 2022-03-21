@@ -11,7 +11,10 @@ import Foundation
 struct AppOKRWidgetViewModel {
     private let userDefaults = UserDefaults(suiteName: "group.com.appokr.AppOKR")
     
-    func getData() -> String {
-        userDefaults?.string(forKey: "WidgetKey") ?? "bbbb"
+    func getEntry() -> AppOKRWidgetEntry {
+        let dictionary: [String: Any] = userDefaults?.dictionary(forKey: "WidgetKey") ?? [:]
+        let date: Date = dictionary["Date"] as? Date ?? Date()
+        let bookName: String = dictionary["BookName"] as? String ?? ""
+        return AppOKRWidgetEntry(date: date, subtitle: bookName)
     }
 }

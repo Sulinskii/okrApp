@@ -11,7 +11,10 @@ import WidgetKit
 struct BookDetailsViewModel {
     func updateWidgetData(with bookName: String) {
         guard let userDefaults = UserDefaults(suiteName: "group.com.appokr.AppOKR") else { return }
-        userDefaults.set(bookName, forKey: "WidgetKey")
+        var widgetDictionary = [String: Any]()
+        widgetDictionary["Date"] = Date()
+        widgetDictionary["BookName"] = bookName
+        userDefaults.set(widgetDictionary, forKey: "WidgetKey")
         WidgetCenter.shared.reloadAllTimelines()
     }
 }

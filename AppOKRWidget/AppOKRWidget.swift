@@ -21,10 +21,7 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        let selectedBook = viewModel.getData()
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        let entry = AppOKRWidgetEntry(date: currentDate, subtitle: selectedBook)
+        let entry = viewModel.getEntry()
         let timeline = Timeline(entries: [entry], policy: .atEnd)
         completion(timeline)
     }
