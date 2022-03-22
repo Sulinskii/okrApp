@@ -9,9 +9,6 @@ import Foundation
 import SwiftUI
 
 struct SignUpView: View {
-    @State private var login: String = ""
-    @State private var password: String = ""
-    
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
@@ -22,26 +19,41 @@ struct SignUpView: View {
                 .frame(width: 100, height: 100)
             
             VStack {
-                TextField("Enter your email address here", text: $login)
-                    .textFieldStyle(.roundedBorder)
-                    .padding()
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                    .keyboardType(.emailAddress)
-                
-                SecureField("Enter your password here", text: $password)
-                    .textFieldStyle(.roundedBorder)
-                    .padding()
+                Form {
+                    Section(header: Text("EMAIL"),
+                            footer: Text(viewModel.inlineErrorForEmail)
+                                .foregroundColor(.red)) {
+                        TextField("Email", text: $viewModel.email)
+                            .textFieldStyle(.plain)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
+                            .keyboardType(.emailAddress)
+                    }
+                    
+                    Section(header: Text("PASSWORD"),
+                            footer: Text(viewModel.inlineErrorForPassword)
+                                .foregroundColor(.red)) {
+                        SecureField("Password", text: $viewModel.password)
+                        SecureField("Password again", text: $viewModel.passwordAgain)
+                    }
+                    .textFieldStyle(.plain)
+                }
                 
                 Button("Sign Up") {
-                    viewModel.signUp(with: login, and: password)
+                    viewModel.signUp()
                 }
                 .foregroundColor(.white)
                 .padding()
                 .background(Color.blue)
                 .cornerRadius(8)
+                .disabled(viewModel.isValid)
             }
         }
         .navigationTitle("Sign Up")
+        .onAppear {
+            viewModel.email = ""
+            viewModel.password = ""
+            viewModel.passwordAgain = ""
+        }
     }
 }

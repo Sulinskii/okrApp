@@ -22,12 +22,12 @@
 		689710EA276F7D7B00C1F785 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689710E9276F7D7B00C1F785 /* Author.swift */; };
 		689710EC276F7DAB00C1F785 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689710EB276F7DAB00C1F785 /* Link.swift */; };
 		7517FFD027DE515B00A884BD /* CodableDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7517FFCF27DE515B00A884BD /* CodableDefault.swift */; };
+		753EF3CD27EA66E3001224CA /* PasswordStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753EF3CC27EA66E3001224CA /* PasswordStatus.swift */; };
 		758026D327E60DDF00910A2F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752CB31127E5FF760095669A /* WidgetKit.framework */; };
 		758026D427E60DDF00910A2F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752CB31327E5FF760095669A /* SwiftUI.framework */; };
 		758026D727E60DDF00910A2F /* AppOKRWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026D627E60DDF00910A2F /* AppOKRWidget.swift */; };
 		758026D927E60DE000910A2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758026D827E60DE000910A2F /* Assets.xcassets */; };
 		758026DD27E60DE000910A2F /* AppOKRWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 758026D227E60DDF00910A2F /* AppOKRWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		758026E427E630E000910A2F /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026E327E630E000910A2F /* AppGroup.swift */; };
 		758026E627E7213B00910A2F /* AppOKRWidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026E527E7213B00910A2F /* AppOKRWidgetViewModel.swift */; };
 		758026E827E722C100910A2F /* BookDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026E727E722C100910A2F /* BookDetailsViewModel.swift */; };
 		758026EA27E77C8600910A2F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026E927E77C8600910A2F /* SignInView.swift */; };
@@ -109,13 +109,13 @@
 		7517FFCF27DE515B00A884BD /* CodableDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableDefault.swift; sourceTree = "<group>"; };
 		752CB31127E5FF760095669A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		752CB31327E5FF760095669A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		753EF3CC27EA66E3001224CA /* PasswordStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStatus.swift; sourceTree = "<group>"; };
 		758026D227E60DDF00910A2F /* AppOKRWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AppOKRWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		758026D627E60DDF00910A2F /* AppOKRWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOKRWidget.swift; sourceTree = "<group>"; };
 		758026D827E60DE000910A2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		758026DA27E60DE000910A2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		758026E127E62D4300910A2F /* AppOKR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppOKR.entitlements; sourceTree = "<group>"; };
 		758026E227E62D9300910A2F /* AppOKRWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppOKRWidgetExtension.entitlements; sourceTree = "<group>"; };
-		758026E327E630E000910A2F /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		758026E527E7213B00910A2F /* AppOKRWidgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOKRWidgetViewModel.swift; sourceTree = "<group>"; };
 		758026E727E722C100910A2F /* BookDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewModel.swift; sourceTree = "<group>"; };
 		758026E927E77C8600910A2F /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				7517FFCF27DE515B00A884BD /* CodableDefault.swift */,
-				758026E327E630E000910A2F /* AppGroup.swift */,
+				753EF3CC27EA66E3001224CA /* PasswordStatus.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -520,10 +520,10 @@
 				75F45762277F22DF005D16B3 /* Book.swift in Sources */,
 				689710EA276F7D7B00C1F785 /* Author.swift in Sources */,
 				689710E6276F793800C1F785 /* Feed.swift in Sources */,
-				758026E427E630E000910A2F /* AppGroup.swift in Sources */,
 				689710E8276F798E00C1F785 /* ResultData.swift in Sources */,
 				75F4576B278760DE005D16B3 /* CollectionRowView.swift in Sources */,
 				758026EC27E77C9600910A2F /* AuthViewModel.swift in Sources */,
+				753EF3CD27EA66E3001224CA /* PasswordStatus.swift in Sources */,
 				75F457662781E205005D16B3 /* BooksViewModel.swift in Sources */,
 				689710DD276F732100C1F785 /* Endpoint.swift in Sources */,
 				689710E1276F754F00C1F785 /* ApiError.swift in Sources */,

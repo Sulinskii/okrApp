@@ -8,10 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct SignInView: View {
-    @State private var login: String = ""
-    @State private var password: String = ""
-    
+struct SignInView: View {    
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
@@ -23,19 +20,19 @@ struct SignInView: View {
                     .frame(width: 100, height: 100)
                 
                 VStack {
-                    TextField("Enter your email address here", text: $login)
+                    TextField("Email", text: $viewModel.email)
                         .textFieldStyle(.roundedBorder)
                         .padding()
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
                         .keyboardType(.emailAddress)
                     
-                    SecureField("Enter your password here", text: $password)
+                    SecureField("Password", text: $viewModel.password)
                         .textFieldStyle(.roundedBorder)
                         .padding()
                     
                     Button("Sign In") {
-                        viewModel.signIn(with: login, and: password)
+                        viewModel.signIn()
                     }
                     .foregroundColor(.white)
                     .padding()
@@ -46,6 +43,11 @@ struct SignInView: View {
                 }
             }
             .navigationTitle("Sign In")
+            .onAppear {
+                viewModel.email = ""
+                viewModel.password = ""
+                viewModel.passwordAgain = ""
+            }
         }
     }
 }
