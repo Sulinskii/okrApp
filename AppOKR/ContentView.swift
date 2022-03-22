@@ -12,17 +12,15 @@ struct ContentView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
-        let viewModel = AuthViewModel()
-        NavigationView {
-//            if viewModel.signedIn {
+        VStack {
+            if viewModel.signedIn {
                 DashboardView()
-//            } else {
-//                SignInView()
-//            }
+            } else {
+                SignInView()
+            }
         }.onAppear {
             viewModel.signedIn = viewModel.isSignedIn
         }
-
     }
 }
 

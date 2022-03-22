@@ -36,9 +36,7 @@
 		758026F627E7906900910A2F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 758026F527E7906900910A2F /* FirebaseAnalytics */; };
 		758026F827E7906900910A2F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 758026F727E7906900910A2F /* FirebaseAuth */; };
 		758026FA27E7AC3C00910A2F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026F927E7AC3C00910A2F /* DashboardView.swift */; };
-		758026FC27E7ADDD00910A2F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026FB27E7ADDD00910A2F /* ContentViewModel.swift */; };
 		758026FF27E7AF4A00910A2F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026FE27E7AF4A00910A2F /* SignUpView.swift */; };
-		7580270127E7AF5700910A2F /* SIgnUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7580270027E7AF5700910A2F /* SIgnUpViewModel.swift */; };
 		75F45762277F22DF005D16B3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F45761277F22DF005D16B3 /* Book.swift */; };
 		75F45764277F2363005D16B3 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F45763277F2363005D16B3 /* Genre.swift */; };
 		75F457662781E205005D16B3 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F457652781E205005D16B3 /* BooksViewModel.swift */; };
@@ -124,9 +122,7 @@
 		758026EB27E77C9600910A2F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		758026F227E78FF000910A2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		758026F927E7AC3C00910A2F /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		758026FB27E7ADDD00910A2F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		758026FE27E7AF4A00910A2F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		7580270027E7AF5700910A2F /* SIgnUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIgnUpViewModel.swift; sourceTree = "<group>"; };
 		75F45761277F22DF005D16B3 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		75F45763277F2363005D16B3 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		75F457652781E205005D16B3 /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
@@ -211,10 +207,10 @@
 				689710DB276F72B600C1F785 /* Netwoking */,
 				689710B0276F564400C1F785 /* AppOKRApp.swift */,
 				689710B2276F564400C1F785 /* ContentView.swift */,
+				758026EB27E77C9600910A2F /* AuthViewModel.swift */,
 				689710B4276F565300C1F785 /* Assets.xcassets */,
 				689710B9276F565300C1F785 /* Info.plist */,
 				689710B6276F565300C1F785 /* Preview Content */,
-				758026FB27E7ADDD00910A2F /* ContentViewModel.swift */,
 			);
 			path = AppOKR;
 			sourceTree = "<group>";
@@ -282,7 +278,6 @@
 			isa = PBXGroup;
 			children = (
 				758026FE27E7AF4A00910A2F /* SignUpView.swift */,
-				7580270027E7AF5700910A2F /* SIgnUpViewModel.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -328,7 +323,6 @@
 		758026FD27E7AF2100910A2F /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				758026EB27E77C9600910A2F /* AuthViewModel.swift */,
 				758026E927E77C8600910A2F /* SignInView.swift */,
 			);
 			path = SignIn;
@@ -517,7 +511,6 @@
 				689710E3276F75D700C1F785 /* Api.swift in Sources */,
 				758026FA27E7AC3C00910A2F /* DashboardView.swift in Sources */,
 				689710B3276F564400C1F785 /* ContentView.swift in Sources */,
-				7580270127E7AF5700910A2F /* SIgnUpViewModel.swift in Sources */,
 				75F4577127876387005D16B3 /* CollectionViewCell.swift in Sources */,
 				75F4576927876057005D16B3 /* CollectionView.swift in Sources */,
 				758026E827E722C100910A2F /* BookDetailsViewModel.swift in Sources */,
@@ -525,7 +518,6 @@
 				75F45764277F2363005D16B3 /* Genre.swift in Sources */,
 				758026FF27E7AF4A00910A2F /* SignUpView.swift in Sources */,
 				75F45762277F22DF005D16B3 /* Book.swift in Sources */,
-				758026FC27E7ADDD00910A2F /* ContentViewModel.swift in Sources */,
 				689710EA276F7D7B00C1F785 /* Author.swift in Sources */,
 				689710E6276F793800C1F785 /* Feed.swift in Sources */,
 				758026E427E630E000910A2F /* AppGroup.swift in Sources */,

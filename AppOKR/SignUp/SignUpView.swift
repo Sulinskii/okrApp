@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 struct SignUpView: View {
-    @State var login: String = ""
-    @State var password: String = ""
+    @State private var login: String = ""
+    @State private var password: String = ""
     
     @EnvironmentObject var viewModel: AuthViewModel
     

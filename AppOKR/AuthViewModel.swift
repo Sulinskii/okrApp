@@ -12,11 +12,11 @@ class AuthViewModel: ObservableObject {
     
     private let auth = Auth.auth()
 
-    var isSignedIn: Bool {
-        auth.currentUser != nil
-    }
-
     @Published var signedIn: Bool = false
+    
+    lazy var isSignedIn: Bool = {
+        auth.currentUser != nil
+    }()
 
     public func signIn(with email: String, and password: String) {
         auth.signIn(withEmail: email, password: password) { [weak self] result, error in
@@ -36,5 +36,10 @@ class AuthViewModel: ObservableObject {
                 self?.signedIn = true
             }
         }
+    }
+    
+    public func signOut() {
+        try? auth.signOut()
+        signedIn = false
     }
 }

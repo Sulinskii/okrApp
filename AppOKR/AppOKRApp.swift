@@ -14,8 +14,8 @@ struct AppOKRApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
-        let viewModel = AuthViewModel()
         WindowGroup {
+            let viewModel = AuthViewModel()
             ContentView()
                 .environmentObject(viewModel)
         }

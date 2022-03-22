@@ -10,19 +10,33 @@ import SwiftUI
 
 struct DashboardView: View {
     @ObservedObject var viewModel = BooksViewModel()
+    @EnvironmentObject var authViewModel: AuthViewModel
     
     var body: some View {
         NavigationView {
             TabView {
                 List(viewModel.books) { book in
                     BookListCell(book: book)
-                }.tabItem {
+                }
+                .tabItem {
                     Text("List view")
                 }
                 CollectionView(books: viewModel.podcasts)
                     .tabItem {
                         Text("Collection view")
                     }
+                VStack {
+                    Button("Sign out") {
+                        authViewModel.signOut()
+                    }
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(8)
+                }
+                .tabItem {
+                    Text("Sign out view")
+                }
             }.navigationBarTitle(Text("Books"))
         }
         .alert(isPresented: $viewModel.presentAlert) {
