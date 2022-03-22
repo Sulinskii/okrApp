@@ -45,8 +45,8 @@ struct SignInView: View {
                     NavigationLink("Create account", destination: SignUpView())
                 }
             }
+            .navigationTitle("Sign In")
         }
-        .navigationTitle("Sign In")
     }
 }
 
