@@ -7,11 +7,16 @@
 
 import SwiftUI
 import WebKit
+import Combine
 
 struct BookDetails: View {
     private let viewModel = BookDetailsViewModel()
-    let book: Book
+    
     @State private var isActive = false
+    
+    let book: Book
+    let action = PassthroughSubject<String, Never>()
+    
     var body: some View {
         NavigationView {
             Text(book.releaseDate)
@@ -19,6 +24,9 @@ struct BookDetails: View {
                 isActive = true
             }
             
+            Button("Do action") {
+                action.send("Big action")
+            }
         }
         .navigationTitle(book.name)
         .navigationBarTitleDisplayMode(.inline)

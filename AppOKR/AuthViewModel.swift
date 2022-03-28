@@ -32,15 +32,15 @@ class AuthViewModel: ObservableObject {
     private var isEmailValidPublisher: AnyPublisher<EmailStatus, Never> {
         $email
             .debounce(for: 0.5, scheduler: RunLoop.main)
-            .map {
-                return self.emailPredicate.evaluate(with: $0) ? .valid : .notValid
-            }
+            .removeDuplicates()
+            .map { self.emailPredicate.evaluate(with: $0) && $0.count > 4 ? .valid : .notValid }
             .eraseToAnyPublisher()
     }
     
     private var isPasswordEmptyPublisher: AnyPublisher<Bool, Never> {
         $password
             .debounce(for: 0.5, scheduler: RunLoop.main)
+            .removeDuplicates()
             .map { $0.isEmpty }
             .eraseToAnyPublisher()
     }
@@ -48,13 +48,14 @@ class AuthViewModel: ObservableObject {
     private var arePasswordsEqualPublisher: AnyPublisher<Bool, Never> {
         Publishers.CombineLatest($password, $passwordAgain)
             .debounce(for: 0.3, scheduler: RunLoop.main)
-            .map { $0 == $1 }
+            .map { $0 == $1 || $1.isEmpty }
             .eraseToAnyPublisher()
     }
     
     private var isPasswordStrongPublisher: AnyPublisher<Bool, Never> {
         $password
             .debounce(for: 0.3, scheduler: RunLoop.main)
+            .removeDuplicates()
             .map { self.passwordPredicate.evaluate(with: $0) }
             .eraseToAnyPublisher()
     }
@@ -62,10 +63,10 @@ class AuthViewModel: ObservableObject {
     private var isPasswordValidPublisher: AnyPublisher<PasswordStatus, Never> {
         Publishers.CombineLatest3(isPasswordEmptyPublisher, arePasswordsEqualPublisher, isPasswordStrongPublisher)
             .map {
-                if $0 { return PasswordStatus.empty }
-                else if !$1 { return PasswordStatus.repeatedPasswordWrong }
-                else if !$2 { return PasswordStatus.notStrongEnough }
-                return PasswordStatus.valid
+                if $0 { return .empty }
+                else if !$1 { return .repeatedPasswordWrong }
+                else if !$2 { return .notStrongEnough }
+                return .valid
             }
             .eraseToAnyPublisher()
     }

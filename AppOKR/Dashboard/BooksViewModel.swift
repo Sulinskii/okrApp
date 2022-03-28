@@ -11,7 +11,6 @@ final class BooksViewModel: ObservableObject {
     
     init(api: Api = Api.shared) {
         self.api = api
-        fetchBooks()
     }
 
     

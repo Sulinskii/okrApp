@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct DashboardView: View {
-    @ObservedObject var viewModel = BooksViewModel()
+    @StateObject var viewModel = BooksViewModel()
     @EnvironmentObject var authViewModel: AuthViewModel
     
     var body: some View {
@@ -38,6 +38,9 @@ struct DashboardView: View {
                     Text("Sign out view")
                 }
             }.navigationBarTitle(Text("Books"))
+        }
+        .onAppear() {
+            viewModel.fetchBooks()
         }
         .alert(isPresented: $viewModel.presentAlert) {
                 Alert(

@@ -46,7 +46,7 @@ struct SignUpView: View {
                 .padding()
                 .background(Color.blue)
                 .cornerRadius(8)
-                .disabled(viewModel.isValid)
+                .disabled(!viewModel.isValid)
             }
         }
         .navigationTitle("Sign Up")
