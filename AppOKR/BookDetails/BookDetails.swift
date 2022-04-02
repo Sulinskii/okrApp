@@ -18,15 +18,13 @@ struct BookDetails: View {
     let action = PassthroughSubject<String, Never>()
     
     var body: some View {
-        NavigationView {
-            Text(book.releaseDate)
-            Button("Website") {
-                isActive = true
-            }
-            
-            Button("Do action") {
-                action.send("Big action")
-            }
+        Text(book.releaseDate)
+        Button("Website") {
+            isActive = true
+        }
+        
+        Button("Do action") {
+            action.send("Big action")
         }
         .navigationTitle(book.name)
         .navigationBarTitleDisplayMode(.inline)

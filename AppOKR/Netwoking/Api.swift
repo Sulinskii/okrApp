@@ -45,6 +45,7 @@ final class Api {
                             .eraseToAnyPublisher()
                 }
                 .retry(numberOfRetries)
+                .print()
                 .eraseToAnyPublisher()
     }
 }
