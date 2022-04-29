@@ -9,7 +9,7 @@ import Foundation
 
 
 struct AppOKRWidgetViewModel {
-    private let userDefaults = UserDefaults(suiteName: "group.com.appokr.AppOKR")
+    private let userDefaults = UserDefaults(suiteName: "group.AppOKR")
     
     func getEntry() -> AppOKRWidgetEntry {
         let dictionary: [String: Any] = userDefaults?.dictionary(forKey: "WidgetKey") ?? [:]

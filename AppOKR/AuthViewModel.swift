@@ -9,7 +9,7 @@ import Foundation
 import FirebaseAuth
 import Combine
 
-class AuthViewModel: ObservableObject {
+final class AuthViewModel: ObservableObject {
     
     private let auth = Auth.auth()
 

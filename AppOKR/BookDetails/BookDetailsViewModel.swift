@@ -10,7 +10,7 @@ import WidgetKit
 
 struct BookDetailsViewModel {
     func updateWidgetData(with bookName: String) {
-        guard let userDefaults = UserDefaults(suiteName: "group.com.appokr.AppOKR") else { return }
+        guard let userDefaults = UserDefaults(suiteName: "group.AppOKR") else { return }
         var widgetDictionary = [String: Any]()
         widgetDictionary["Date"] = Date()
         widgetDictionary["BookName"] = bookName

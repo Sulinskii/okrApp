@@ -13,12 +13,13 @@ struct BookDetails: View {
     private let viewModel = BookDetailsViewModel()
     
     @State private var isActive = false
+    @State private var intValue = 0
     
     let book: Book
     let action = PassthroughSubject<String, Never>()
     
     var body: some View {
-        Text(book.releaseDate)
+        Text("Release date: \(book.releaseDate)")
         Button("Website") {
             isActive = true
         }
@@ -26,10 +27,43 @@ struct BookDetails: View {
         Button("Do action") {
             action.send("Big action")
         }
+        
+        Button("Create future publisher") {
+            createFuture()
+        }
+        
+        Button("Observe on future \(intValue)") {
+            observeOnFuture()
+        }
+        
         .navigationTitle(book.name)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             viewModel.updateWidgetData(with: book.name)
+        }
+    }
+    
+    func observeOnFuture() {
+        createFuture().sink(receiveValue: { value in
+            intValue = value
+            print("RECEIVED VALUE: \(value)")
+        })
+    }
+    
+    func createFuture() -> AnyPublisher<Int, Never>  {
+        return Deferred {
+            Future { promise in
+              print("Closure executed")
+                promise(.success(Int.random(in: 1..<10)))
+            }
+          }.eraseToAnyPublisher()
+    }
+    
+    func performAsyncAction() -> Future <Bool, Never> {
+        return Future { promise in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                return promise(.success(true))
+            }
         }
     }
 }

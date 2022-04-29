@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct DashboardView: View {
-    @StateObject var viewModel = BooksViewModel()
+    @ObservedObject var viewModel: BooksViewModel
     @EnvironmentObject var authViewModel: AuthViewModel
     
     var body: some View {
@@ -18,13 +18,9 @@ struct DashboardView: View {
                 List(viewModel.books) { book in
                     BookListCell(book: book)
                 }
-                .tabItem {
-                    Text("List view")
-                }
+                    .tabItem { Text("List view") }
                 CollectionView(books: viewModel.podcasts)
-                    .tabItem {
-                        Text("Collection view")
-                    }
+                    .tabItem { Text("Collection view") }
                 VStack {
                     Button("Sign out") {
                         authViewModel.signOut()
@@ -34,9 +30,7 @@ struct DashboardView: View {
                     .background(Color.blue)
                     .cornerRadius(8)
                 }
-                .tabItem {
-                    Text("Sign out view")
-                }
+                .tabItem { Text("Sign out view") }
             }.navigationBarTitle(Text("Books"))
         }
         .onAppear() {

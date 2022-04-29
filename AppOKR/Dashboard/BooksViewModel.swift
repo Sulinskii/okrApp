@@ -13,11 +13,6 @@ final class BooksViewModel: ObservableObject {
         self.api = api
     }
 
-    
-//    func retry() {
-//        cancellationToken.ret
-//    }
-//
     func fetchBooks() {
         let booksApiCall = api.fetchBooks()
         let podcastsApiCall = api.fetchPodcasts()
@@ -32,7 +27,6 @@ final class BooksViewModel: ObservableObject {
                         break
                     }
                 }, receiveValue: { [weak self] books, podcasts in
-                    print("RECEIVED VALUE")
                     self?.books = books.feed.results
                     self?.podcasts = podcasts.feed.results
                 })

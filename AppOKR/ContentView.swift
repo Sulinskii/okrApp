@@ -9,17 +9,18 @@ import SwiftUI
 import FirebaseAuth
 
 struct ContentView: View {
-    @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var authViewModel: AuthViewModel
+    @StateObject var viewModel = BooksViewModel()
     
     var body: some View {
         VStack {
-            if viewModel.signedIn {
-                DashboardView()
+            if authViewModel.signedIn {
+                DashboardView(viewModel: viewModel)
             } else {
                 SignInView()
             }
         }.onAppear {
-            viewModel.signedIn = viewModel.isSignedIn
+            authViewModel.signedIn = authViewModel.isSignedIn
         }
     }
 }
