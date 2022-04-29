@@ -17,7 +17,7 @@ final class BooksViewModel: ObservableObject {
         let booksApiCall = api.fetchBooks()
         let podcastsApiCall = api.fetchPodcasts()
         cancellationToken = Publishers.Zip(booksApiCall, podcastsApiCall)
-                .receive(on: RunLoop.main)
+                .receive(on: DispatchQueue.main)
                 .sink(receiveCompletion: { [weak self] completion in
                     switch completion {
                     case .failure(let error):
