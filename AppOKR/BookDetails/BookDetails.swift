@@ -15,11 +15,12 @@ struct BookDetails: View {
     @State private var isActive = false
     @State private var intValue = 0
     
-    let book: Book
+    let book: BookObject
     let action = PassthroughSubject<String, Never>()
+    let action2 = CurrentValueSubject<String, Never>("Test")
     
     var body: some View {
-        Text("Release date: \(book.releaseDate)")
+        Text("Release date: \(book.releaseDate ?? "")")
         Button("Website") {
             isActive = true
         }
@@ -36,10 +37,10 @@ struct BookDetails: View {
             observeOnFuture()
         }
         
-        .navigationTitle(book.name)
+        .navigationTitle(book.name ?? "")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
-            viewModel.updateWidgetData(with: book.name)
+            viewModel.updateWidgetData(with: book.name ?? "")
         }
     }
     
@@ -48,15 +49,15 @@ struct BookDetails: View {
             intValue = value
             print("RECEIVED VALUE: \(value)")
         })
+        
     }
     
     func createFuture() -> AnyPublisher<Int, Never>  {
-        return Deferred {
+        
             Future { promise in
               print("Closure executed")
                 promise(.success(Int.random(in: 1..<10)))
-            }
-          }.eraseToAnyPublisher()
+            }.eraseToAnyPublisher()
     }
     
     func performAsyncAction() -> Future <Bool, Never> {

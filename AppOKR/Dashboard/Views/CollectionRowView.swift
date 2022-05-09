@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RowView: View {
-    let books: [Book]
+    let books: [BookObject]
     let width: CGFloat
     let height: CGFloat
     let horizontalSpacing: CGFloat

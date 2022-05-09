@@ -9,11 +9,11 @@ import SwiftUI
 import Combine
 
 struct BookListCell: View {
-    let book: Book
+    let book: BookObject
     let bookDetails: BookDetails
     var cancellables = Set<AnyCancellable>()
     
-    init(book: Book) {
+    init(book: BookObject) {
         self.book = book
         self.bookDetails = BookDetails(book: book)
         handleAction()
@@ -22,8 +22,8 @@ struct BookListCell: View {
     var body: some View {
         NavigationLink(destination: self.bookDetails) {
             VStack(alignment: .leading) {
-                Text(book.name)
-                Text(book.artistName)
+                Text(book.name ?? "")
+                Text(book.artistName ?? "")
                     .font(.subheadline)
                     .foregroundColor(.blue)
             }

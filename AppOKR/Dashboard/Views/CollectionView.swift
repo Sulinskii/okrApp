@@ -12,7 +12,7 @@ struct CollectionView: View {
     let horizontalSpacing: CGFloat = 16
     let height: CGFloat = 100
     
-    let books: [Book]
+    let books: [BookObject]
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
@@ -28,7 +28,7 @@ struct CollectionView: View {
     }
     
     func buildView(rowIndex: Int, geometry: GeometryProxy) -> RowView? {
-        var rowBooks = [Book]()
+        var rowBooks = [BookObject]()
         for itemIndex in 0..<Int(itemPerRow) {
             if rowIndex + itemIndex < books.count {
                 rowBooks.append(books[rowIndex + itemIndex])

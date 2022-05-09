@@ -10,12 +10,13 @@ import FirebaseAuth
 
 struct ContentView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
-    @StateObject var viewModel = BooksViewModel()
+    @Environment(\.managedObjectContext) private var viewContext
     
     var body: some View {
         VStack {
             if authViewModel.signedIn {
-                DashboardView(viewModel: viewModel)
+                DashboardView()
+                    .environment(\.managedObjectContext, self.viewContext)
             } else {
                 SignInView()
             }
@@ -29,6 +30,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ContentView()
+                .environmentObject(AuthViewModel())
         }
     }
 }

@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct CollectionViewCell: View {
-    let book: Book
+    let book: BookObject
     var body: some View {
         NavigationLink(destination: BookDetails(book: book)) {
-            Text(book.name)
+            Text(book.name ?? "")
                 .font(.subheadline)
                 .lineLimit(nil)
         }

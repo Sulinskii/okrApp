@@ -23,6 +23,8 @@
 		689710EC276F7DAB00C1F785 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689710EB276F7DAB00C1F785 /* Link.swift */; };
 		7517FFD027DE515B00A884BD /* CodableDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7517FFCF27DE515B00A884BD /* CodableDefault.swift */; };
 		753EF3CD27EA66E3001224CA /* PasswordStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753EF3CC27EA66E3001224CA /* PasswordStatus.swift */; };
+		7564115C28285B83008F3B2A /* BooksList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7564115A28285B83008F3B2A /* BooksList.xcdatamodeld */; };
+		7564115E28285D65008F3B2A /* BookObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7564115D28285D65008F3B2A /* BookObject+.swift */; };
 		758026D327E60DDF00910A2F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752CB31127E5FF760095669A /* WidgetKit.framework */; };
 		758026D427E60DDF00910A2F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752CB31327E5FF760095669A /* SwiftUI.framework */; };
 		758026D727E60DDF00910A2F /* AppOKRWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026D627E60DDF00910A2F /* AppOKRWidget.swift */; };
@@ -110,6 +112,8 @@
 		752CB31127E5FF760095669A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		752CB31327E5FF760095669A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		753EF3CC27EA66E3001224CA /* PasswordStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStatus.swift; sourceTree = "<group>"; };
+		7564115B28285B83008F3B2A /* BooksList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BooksList.xcdatamodel; sourceTree = "<group>"; };
+		7564115D28285D65008F3B2A /* BookObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookObject+.swift"; sourceTree = "<group>"; };
 		758026D227E60DDF00910A2F /* AppOKRWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AppOKRWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		758026D627E60DDF00910A2F /* AppOKRWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOKRWidget.swift; sourceTree = "<group>"; };
 		758026D827E60DE000910A2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -316,6 +320,8 @@
 			children = (
 				75F457652781E205005D16B3 /* BooksViewModel.swift */,
 				75F457672787602E005D16B3 /* Views */,
+				7564115A28285B83008F3B2A /* BooksList.xcdatamodeld */,
+				7564115D28285D65008F3B2A /* BookObject+.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -516,9 +522,11 @@
 				758026E827E722C100910A2F /* BookDetailsViewModel.swift in Sources */,
 				689710DF276F738E00C1F785 /* RequestProvider.swift in Sources */,
 				75F45764277F2363005D16B3 /* Genre.swift in Sources */,
+				7564115C28285B83008F3B2A /* BooksList.xcdatamodeld in Sources */,
 				758026FF27E7AF4A00910A2F /* SignUpView.swift in Sources */,
 				75F45762277F22DF005D16B3 /* Book.swift in Sources */,
 				689710EA276F7D7B00C1F785 /* Author.swift in Sources */,
+				7564115E28285D65008F3B2A /* BookObject+.swift in Sources */,
 				689710E6276F793800C1F785 /* Feed.swift in Sources */,
 				689710E8276F798E00C1F785 /* ResultData.swift in Sources */,
 				75F4576B278760DE005D16B3 /* CollectionRowView.swift in Sources */,
@@ -969,6 +977,19 @@
 			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		7564115A28285B83008F3B2A /* BooksList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7564115B28285B83008F3B2A /* BooksList.xcdatamodel */,
+			);
+			currentVersion = 7564115B28285B83008F3B2A /* BooksList.xcdatamodel */;
+			path = BooksList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 689710A5276F564400C1F785 /* Project object */;
 }

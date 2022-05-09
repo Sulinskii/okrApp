@@ -8,11 +8,10 @@
 import Foundation
 import FirebaseAuth
 import Combine
+import CoreData
 
 final class AuthViewModel: ObservableObject {
     
-    private let auth = Auth.auth()
-
     @Published var signedIn: Bool = false
     
     @Published var email = ""
@@ -26,6 +25,7 @@ final class AuthViewModel: ObservableObject {
     
     private var cancellables = Set<AnyCancellable>()
     
+    private let auth = Auth.auth()
     private let emailPredicate = NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
     private let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$")
     
@@ -33,7 +33,10 @@ final class AuthViewModel: ObservableObject {
         $email
             .debounce(for: 0.5, scheduler: RunLoop.main)
             .removeDuplicates()
-            .map { self.emailPredicate.evaluate(with: $0) && $0.count > 4 ? .valid : .notValid }
+            .map { [weak self] in
+                guard let self = self else { return .notValid }
+                return self.emailPredicate.evaluate(with: $0) && $0.count > 4 ? .valid : .notValid
+            }
             .eraseToAnyPublisher()
     }
     
@@ -56,12 +59,16 @@ final class AuthViewModel: ObservableObject {
         $password
             .debounce(for: 0.3, scheduler: RunLoop.main)
             .removeDuplicates()
-            .map { self.passwordPredicate.evaluate(with: $0) }
+            .compactMap { [weak self] in
+                self?.passwordPredicate.evaluate(with: $0)
+            }
+//            .map { self.passwordPredicate.evaluate(with: $0) }
             .eraseToAnyPublisher()
     }
     
     private var isPasswordValidPublisher: AnyPublisher<PasswordStatus, Never> {
         Publishers.CombineLatest3(isPasswordEmptyPublisher, arePasswordsEqualPublisher, isPasswordStrongPublisher)
+            .dropFirst()
             .map {
                 if $0 { return .empty }
                 else if !$1 { return .repeatedPasswordWrong }
@@ -82,16 +89,23 @@ final class AuthViewModel: ObservableObject {
     }()
     
     init() {
+        
         isFormValidPublisher
             .receive(on: RunLoop.main)
-            .assign(to: \.isValid, on: self)
+            .sink(receiveValue: { [weak self] isFormValid in
+                self?.isValid = isFormValid
+            })
+//            .assign(to: \.isValid, on: self)
             .store(in: &cancellables)
         
         isEmailValidPublisher
             .dropFirst()
             .receive(on: RunLoop.main)
             .map { $0.errorMessage() }
-            .assign(to: \.inlineErrorForEmail, on: self)
+            .sink(receiveValue: { [weak self] isEmailValid in
+                self?.inlineErrorForEmail = isEmailValid
+            })
+//            .assign(to: \.inlineErrorForEmail, on: self)
             .store(in: &cancellables)
         
         
@@ -99,7 +113,10 @@ final class AuthViewModel: ObservableObject {
             .dropFirst()
             .receive(on: RunLoop.main)
             .map { $0.errorMessage() }
-            .assign(to: \.inlineErrorForPassword, on: self)
+            .sink(receiveValue: { [weak self] isPasswordValid in
+                self?.inlineErrorForPassword = isPasswordValid
+            })
+//            .assign(to: \.inlineErrorForPassword, on: self)
             .store(in: &cancellables)
     }
 
@@ -124,6 +141,7 @@ final class AuthViewModel: ObservableObject {
     }
     
     public func signOut() {
+        CoreDataStack.delete()
         try? auth.signOut()
         signedIn = false
     }

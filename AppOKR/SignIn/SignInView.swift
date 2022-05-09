@@ -10,7 +10,6 @@ import SwiftUI
 
 struct SignInView: View {    
     @EnvironmentObject var viewModel: AuthViewModel
-    
     var body: some View {
         NavigationView {
             VStack {
@@ -56,6 +55,7 @@ struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             SignInView()
+                .environmentObject(AuthViewModel())
         }
     }
 }

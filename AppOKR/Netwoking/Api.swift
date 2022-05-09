@@ -21,8 +21,8 @@ final class Api {
         self.requestProvider = requestProvider
     }
     
-    func fetchBooks() -> AnyPublisher<ResultData, Error> {
-        let endpoint = booksEndpoint()
+    func fetchBooks(_ quantity: Int) -> AnyPublisher<ResultData, Error> {
+        let endpoint = booksEndpoint(quantity)
         let request = requestProvider.request(for: endpoint)
 
         return dataPublisher(type: ResultData.self, request: request)
@@ -37,23 +37,23 @@ final class Api {
     
     func dataPublisher<T: Decodable>(type: T.Type, request: URLRequest) -> AnyPublisher<T, Error> {
         session.dataTaskPublisher(for: request)
-//                .handleEvents(receiveSubscription: { subscription in
-//                    print("SUBSCRIPTION STARTED: \(subscription)")
-//                }, receiveOutput: { data, response in
-//                    print("RECEIVED OUTPUT: \(data), \(response)")
-//                }, receiveCompletion: { completion in
-//                    switch completion {
-//                    case .finished:
-//                        print("FINISHED")
-//                    case .failure(let error):
-//                        print("ERROR: \(error)")
-//                    }
-//                }, receiveCancel: {
-//                    print("RECEIVED CANCEL")
-//                }, receiveRequest: { request in
-//                    print("RECEIVED REQUEST: \(request)")
-//                })
-                .tryMap{ try self.validate($0.data, $0.response)}
+                .handleEvents(receiveSubscription: { subscription in
+                    print("SUBSCRIPTION STARTED: \(subscription)")
+                }, receiveOutput: { data, response in
+                    print("RECEIVED OUTPUT: \(data), \(response)")
+                }, receiveCompletion: { completion in
+                    switch completion {
+                    case .finished:
+                        print("FINISHED")
+                    case .failure(let error):
+                        print("ERROR: \(error)")
+                    }
+                }, receiveCancel: {
+                    print("RECEIVED CANCEL")
+                }, receiveRequest: { request in
+                    print("RECEIVED REQUEST: \(request)")
+                })
+                .tryMap{ try Self.validate($0.data, $0.response)}
                 .decode(type: type, decoder: decoder)
                 .catch{ (error: Error) -> AnyPublisher<T, Error> in
                     return Fail(error: error)
@@ -62,18 +62,19 @@ final class Api {
                 }
                 .retry(numberOfRetries)
                 .print()
+                .share()
                 .eraseToAnyPublisher()
     }
 }
 
 private extension Api {
-    func booksEndpoint() -> Endpoint {
+    func booksEndpoint(_ quantity: Int) -> Endpoint {
         let headers = [
             "Content-Type": "application/json",
             "cache-control": "no-cache",
         ]
 
-        return Endpoint(method: .get, params: nil, headers: headers, encoding: .jsonEncoding, path: "/api/v2/us/books/top-free/10/books.json")
+        return Endpoint(method: .get, params: nil, headers: headers, encoding: .jsonEncoding, path: "/api/v2/us/books/top-free/\(quantity)/books.json")
     }
     
     func podcastsEndpoint() -> Endpoint {
@@ -87,7 +88,7 @@ private extension Api {
 }
 
 private extension Api {
-    func validate(_ data: Data, _ response: URLResponse) throws -> Data {
+    static func validate(_ data: Data, _ response: URLResponse) throws -> Data {
         guard let httpResponse = response as? HTTPURLResponse else {
             throw APIError.invalidResponse
         }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import CoreData
 
 @main
 struct AppOKRApp: App {
@@ -18,6 +19,7 @@ struct AppOKRApp: App {
             let viewModel = AuthViewModel()
             ContentView()
                 .environmentObject(viewModel)
+                .environment(\.managedObjectContext, CoreDataStack.viewContext)
         }
     }
 }
@@ -29,3 +31,39 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
     }
 }
 
+enum CoreDataStack {
+    static var viewContext: NSManagedObjectContext = {
+        let container = NSPersistentContainer(name: "BooksList")
+        
+        container.loadPersistentStores { _, error in
+            guard error == nil else {
+                fatalError("\(#file), \(#function), \(error!.localizedDescription)")
+            }
+        }
+        
+        return container.viewContext
+    }()
+    
+    static func save() {
+        guard viewContext.hasChanges else { return }
+        
+        do {
+            try viewContext.save()
+        } catch {
+            fatalError("\(#file), \(#function), \(error.localizedDescription)")
+        }
+    }
+    
+    static func delete() {
+        
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: BookObject.self))
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        
+        do {
+            try viewContext.execute(deleteRequest)
+            try viewContext.save()
+        } catch {
+            fatalError("\(#file), \(#function), \(error.localizedDescription)")
+        }
+    }
+}
