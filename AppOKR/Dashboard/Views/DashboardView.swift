@@ -22,6 +22,7 @@ struct DashboardView: View {
         animation: .easeInOut
     ) private var books: FetchedResults<BookObject>
     
+    @ViewBuilder
     var body: some View {
         NavigationView {
             TabView {
@@ -93,6 +94,14 @@ struct DashboardView: View {
                 }))
         }
     }
-    
-    
 }
+
+struct DashboardView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            DashboardView()
+                .environmentObject(AuthViewModel())
+        }
+    }
+}
+        

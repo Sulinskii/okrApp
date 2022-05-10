@@ -3,6 +3,7 @@ import Foundation
 import CoreData
 
 final class BooksViewModel: ObservableObject {
+    
     private let api: Api
     private let viewContext: NSManagedObjectContext
     private var cancellationToken = Set<AnyCancellable>()
