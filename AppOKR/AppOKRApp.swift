@@ -20,6 +20,7 @@ struct AppOKRApp: App {
             ContentView()
                 .environmentObject(viewModel)
                 .environment(\.managedObjectContext, CoreDataStack.viewContext)
+            
         }
     }
 }

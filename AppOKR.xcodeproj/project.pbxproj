@@ -25,6 +25,8 @@
 		753EF3CD27EA66E3001224CA /* PasswordStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753EF3CC27EA66E3001224CA /* PasswordStatus.swift */; };
 		7564115C28285B83008F3B2A /* BooksList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7564115A28285B83008F3B2A /* BooksList.xcdatamodeld */; };
 		7564115E28285D65008F3B2A /* BookObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7564115D28285D65008F3B2A /* BookObject+.swift */; };
+		75641160282979B1008F3B2A /* DashboardBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7564115F282979B1008F3B2A /* DashboardBottomView.swift */; };
+		75641162282A35DF008F3B2A /* BackgroundColorKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75641161282A35DF008F3B2A /* BackgroundColorKey.swift */; };
 		758026D327E60DDF00910A2F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752CB31127E5FF760095669A /* WidgetKit.framework */; };
 		758026D427E60DDF00910A2F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752CB31327E5FF760095669A /* SwiftUI.framework */; };
 		758026D727E60DDF00910A2F /* AppOKRWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026D627E60DDF00910A2F /* AppOKRWidget.swift */; };
@@ -114,6 +116,8 @@
 		753EF3CC27EA66E3001224CA /* PasswordStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStatus.swift; sourceTree = "<group>"; };
 		7564115B28285B83008F3B2A /* BooksList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BooksList.xcdatamodel; sourceTree = "<group>"; };
 		7564115D28285D65008F3B2A /* BookObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookObject+.swift"; sourceTree = "<group>"; };
+		7564115F282979B1008F3B2A /* DashboardBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardBottomView.swift; sourceTree = "<group>"; };
+		75641161282A35DF008F3B2A /* BackgroundColorKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorKey.swift; sourceTree = "<group>"; };
 		758026D227E60DDF00910A2F /* AppOKRWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AppOKRWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		758026D627E60DDF00910A2F /* AppOKRWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOKRWidget.swift; sourceTree = "<group>"; };
 		758026D827E60DE000910A2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -274,6 +278,7 @@
 			children = (
 				7517FFCF27DE515B00A884BD /* CodableDefault.swift */,
 				753EF3CC27EA66E3001224CA /* PasswordStatus.swift */,
+				75641161282A35DF008F3B2A /* BackgroundColorKey.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 				75F4576E27876243005D16B3 /* BookListCell.swift */,
 				75F4577027876387005D16B3 /* CollectionViewCell.swift */,
 				758026F927E7AC3C00910A2F /* DashboardView.swift */,
+				7564115F282979B1008F3B2A /* DashboardBottomView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -522,11 +528,13 @@
 				758026E827E722C100910A2F /* BookDetailsViewModel.swift in Sources */,
 				689710DF276F738E00C1F785 /* RequestProvider.swift in Sources */,
 				75F45764277F2363005D16B3 /* Genre.swift in Sources */,
+				75641160282979B1008F3B2A /* DashboardBottomView.swift in Sources */,
 				7564115C28285B83008F3B2A /* BooksList.xcdatamodeld in Sources */,
 				758026FF27E7AF4A00910A2F /* SignUpView.swift in Sources */,
 				75F45762277F22DF005D16B3 /* Book.swift in Sources */,
 				689710EA276F7D7B00C1F785 /* Author.swift in Sources */,
 				7564115E28285D65008F3B2A /* BookObject+.swift in Sources */,
+				75641162282A35DF008F3B2A /* BackgroundColorKey.swift in Sources */,
 				689710E6276F793800C1F785 /* Feed.swift in Sources */,
 				689710E8276F798E00C1F785 /* ResultData.swift in Sources */,
 				75F4576B278760DE005D16B3 /* CollectionRowView.swift in Sources */,

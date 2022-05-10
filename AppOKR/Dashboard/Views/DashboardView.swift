@@ -10,48 +10,77 @@ import SwiftUI
 import CoreData
 
 struct DashboardView: View {
+    
     @State var numberOfBooksToFetch = 10
     @StateObject var viewModel: BooksViewModel = BooksViewModel()
     @EnvironmentObject var authViewModel: AuthViewModel
-    @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.appBackgroundColor) var backgroundColor
+    @Environment(\.verticalSizeClass) var verticalSizeClass
     
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor( keyPath: \BookObject.id, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \BookObject.id, ascending: true)],
         animation: .easeInOut
     ) private var books: FetchedResults<BookObject>
     
     var body: some View {
         NavigationView {
             TabView {
-                VStack {
-                    List(books) { book in
-                        BookListCell(book: book)
+                if verticalSizeClass == .regular {
+                    VStack {
+                        List(books) { book in
+                            BookListCell(book: book)
+                        }
+                        
+                        Text("Number of books in dashboard view: \(numberOfBooksToFetch)")
+                            .padding()
+                            .background(backgroundColor)
+                            .cornerRadius(5)
+                        
+                        DashboardBottomView(numberOfBooksFetched: $numberOfBooksToFetch) {
+                            numberOfBooksToFetch += 10
+                            viewModel.fetchBooks(quantity: numberOfBooksToFetch)
+                        }
+                        .padding()
+                        
                     }
-                
-                    
-                    Button("Fetch more books") {
-                        numberOfBooksToFetch += 10
-                        viewModel.fetchBooks(quantity: numberOfBooksToFetch)
+                    .tabItem{ Text("List view") }
+                } else {
+                    HStack {
+                        List(books) { book in
+                            BookListCell(book: book)
+                        }
+                        
+                        Text("Number of books in dashboard view: \(numberOfBooksToFetch)")
+                            .padding()
+                            .background(backgroundColor)
+                            .cornerRadius(5)
+                        
+                        DashboardBottomView(numberOfBooksFetched: $numberOfBooksToFetch) {
+                            numberOfBooksToFetch += 10
+                            viewModel.fetchBooks(quantity: numberOfBooksToFetch)
+                        }
+                        .padding()
+                        
                     }
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.blue)
-                    .cornerRadius(8)
+                    .tabItem{ Text("List view") }
                 }
-                .tabItem { Text("List view") }
-    
+                
+                CollectionView(books: viewModel.podcasts)
+                    .tabItem{ Text("Collection view") }
+                
                 VStack {
                     Button("Sign out") {
                         authViewModel.signOut()
                     }
-                    
-                    
-                    
+                    .accessibilityIdentifier("identifier")
                 }
-                .tabItem { Text("Sign out view") }
+                .tabItem{ Text("Sign out view") }
             }.navigationBarTitle(Text("Books"))
         }
         .onAppear() {
+            if books.count > 0 {
+                numberOfBooksToFetch = books.count
+            }
             viewModel.fetchBooks(quantity: numberOfBooksToFetch)
         }
         .alert(isPresented: $viewModel.presentAlert) {

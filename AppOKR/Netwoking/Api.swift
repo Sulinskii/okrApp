@@ -46,7 +46,7 @@ final class Api {
                     case .finished:
                         print("FINISHED")
                     case .failure(let error):
-                        print("ERROR: \(error)")
+                        print("RECEIVED ERROR: \(error)")
                     }
                 }, receiveCancel: {
                     print("RECEIVED CANCEL")
@@ -61,8 +61,6 @@ final class Api {
                             .eraseToAnyPublisher()
                 }
                 .retry(numberOfRetries)
-                .print()
-                .share()
                 .eraseToAnyPublisher()
     }
 }

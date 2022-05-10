@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct RowView: View {
-    let books: [BookObject]
+    let books: [Book]
     let width: CGFloat
     let height: CGFloat
     let horizontalSpacing: CGFloat
     var body: some View {
         HStack(spacing: horizontalSpacing) {
             ForEach(books) { book in
-                CollectionViewCell(book: book)
+                CollectionViewCell(name: book.name)
                     .frame(width: width, height: height)
                     .background(Color.yellow)
                     .cornerRadius(10)

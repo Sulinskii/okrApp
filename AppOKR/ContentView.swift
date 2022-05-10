@@ -10,13 +10,12 @@ import FirebaseAuth
 
 struct ContentView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
-    @Environment(\.managedObjectContext) private var viewContext
     
     var body: some View {
         VStack {
             if authViewModel.signedIn {
                 DashboardView()
-                    .environment(\.managedObjectContext, self.viewContext)
+//                    .environment(\.appBackgroundColor, .blue)
             } else {
                 SignInView()
             }
