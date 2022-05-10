@@ -62,7 +62,6 @@ final class AuthViewModel: ObservableObject {
             .compactMap { [weak self] in
                 self?.passwordPredicate.evaluate(with: $0)
             }
-//            .map { self.passwordPredicate.evaluate(with: $0) }
             .eraseToAnyPublisher()
     }
     
@@ -95,7 +94,6 @@ final class AuthViewModel: ObservableObject {
             .sink(receiveValue: { [weak self] isFormValid in
                 self?.isValid = isFormValid
             })
-//            .assign(to: \.isValid, on: self)
             .store(in: &cancellables)
         
         isEmailValidPublisher
@@ -105,7 +103,6 @@ final class AuthViewModel: ObservableObject {
             .sink(receiveValue: { [weak self] isEmailValid in
                 self?.inlineErrorForEmail = isEmailValid
             })
-//            .assign(to: \.inlineErrorForEmail, on: self)
             .store(in: &cancellables)
         
         
@@ -116,7 +113,6 @@ final class AuthViewModel: ObservableObject {
             .sink(receiveValue: { [weak self] isPasswordValid in
                 self?.inlineErrorForPassword = isPasswordValid
             })
-//            .assign(to: \.inlineErrorForPassword, on: self)
             .store(in: &cancellables)
     }
 
