@@ -33,10 +33,7 @@ final class AuthViewModel: ObservableObject {
         $email
             .debounce(for: 0.5, scheduler: RunLoop.main)
             .removeDuplicates()
-            .map { [weak self] in
-                guard let self = self else { return .notValid }
-                return self.emailPredicate.evaluate(with: $0) && $0.count > 4 ? .valid : .notValid
-            }
+            .map { self.emailPredicate.evaluate(with: $0) && $0.count > 4 ? .valid : .notValid }
             .eraseToAnyPublisher()
     }
     
@@ -59,10 +56,7 @@ final class AuthViewModel: ObservableObject {
         $password
             .debounce(for: 0.3, scheduler: RunLoop.main)
             .removeDuplicates()
-            .compactMap { [weak self] in
-                self?.passwordPredicate.evaluate(with: $0)
-            }
-//            .map { self.passwordPredicate.evaluate(with: $0) }
+            .map { self.passwordPredicate.evaluate(with: $0) }
             .eraseToAnyPublisher()
     }
     
@@ -92,20 +86,14 @@ final class AuthViewModel: ObservableObject {
         
         isFormValidPublisher
             .receive(on: RunLoop.main)
-            .sink(receiveValue: { [weak self] isFormValid in
-                self?.isValid = isFormValid
-            })
-//            .assign(to: \.isValid, on: self)
+            .assign(to: \.isValid, on: self)
             .store(in: &cancellables)
         
         isEmailValidPublisher
             .dropFirst()
             .receive(on: RunLoop.main)
             .map { $0.errorMessage() }
-            .sink(receiveValue: { [weak self] isEmailValid in
-                self?.inlineErrorForEmail = isEmailValid
-            })
-//            .assign(to: \.inlineErrorForEmail, on: self)
+            .assign(to: \.inlineErrorForEmail, on: self)
             .store(in: &cancellables)
         
         
@@ -113,10 +101,7 @@ final class AuthViewModel: ObservableObject {
             .dropFirst()
             .receive(on: RunLoop.main)
             .map { $0.errorMessage() }
-            .sink(receiveValue: { [weak self] isPasswordValid in
-                self?.inlineErrorForPassword = isPasswordValid
-            })
-//            .assign(to: \.inlineErrorForPassword, on: self)
+            .assign(to: \.inlineErrorForPassword, on: self)
             .store(in: &cancellables)
     }
 
