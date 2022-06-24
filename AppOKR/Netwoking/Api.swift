@@ -55,11 +55,6 @@ final class Api {
                 })
                 .tryMap{ try Self.validate($0.data, $0.response)}
                 .decode(type: type, decoder: decoder)
-                .catch{ (error: Error) -> AnyPublisher<T, Error> in
-                    return Fail(error: error)
-                            .delay(for: 3, scheduler: self.scheduler)
-                            .eraseToAnyPublisher()
-                }
                 .retry(numberOfRetries)
                 .eraseToAnyPublisher()
     }

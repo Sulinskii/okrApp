@@ -88,7 +88,8 @@ struct DashboardView: View {
             Alert(
                 title: Text("Unable to fetch books"),
                 message: Text("Please try again"),
-                dismissButton: .default(Text("Okay"), action: {
+                primaryButton: .default(Text("Okay")),
+                secondaryButton: .default(Text("Try again"), action: {
                     viewModel.presentAlert = false
                     viewModel.fetchBooks(quantity: 10)
                 }))
