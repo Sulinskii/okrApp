@@ -16,26 +16,26 @@ struct BookDetails: View {
     @State private var intValue = 0
     
     let book: BookObject
-    let action = PassthroughSubject<String, Never>()
-    let action2 = CurrentValueSubject<String, Never>("Test")
+//    let action = PassthroughSubject<String, Never>()
+//    let action2 = CurrentValueSubject<String, Never>("Test")
     
     var body: some View {
         Text("Release date: \(book.releaseDate ?? "")")
-        Button("Website") {
-            isActive = true
-        }
+//        Button("Website") {
+//            isActive = true
+//        }
         
-        Button("Do action") {
-            action.send("Big action")
-        }
-        
-        Button("Create future publisher") {
-            createFuture()
-        }
-        
-        Button("Observe on future \(intValue)") {
-            observeOnFuture()
-        }
+//        Button("Do action") {
+//            action.send("Big action")
+//        }
+//
+//        Button("Create future publisher") {
+//            createFuture()
+//        }
+//
+//        Button("Observe on future \(intValue)") {
+//            observeOnFuture()
+//        }
         
         .navigationTitle(book.name ?? "")
         .navigationBarTitleDisplayMode(.inline)

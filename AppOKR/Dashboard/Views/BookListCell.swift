@@ -16,7 +16,7 @@ struct BookListCell: View {
     init(book: BookObject) {
         self.book = book
         self.bookDetails = BookDetails(book: book)
-        handleAction()
+//        handleAction()
     }
     
     var body: some View {
@@ -30,9 +30,9 @@ struct BookListCell: View {
         }
     }
     
-    private mutating func handleAction() {
-        bookDetails.action.sink(receiveValue: { value in
-            print("RECEIVED VALUE: \(value)")
-        }).store(in: &cancellables)
-    }
+//    private mutating func handleAction() {
+//        bookDetails.action.sink(receiveValue: { value in
+//            print("RECEIVED VALUE: \(value)")
+//        }).store(in: &cancellables)
+//    }
 }
