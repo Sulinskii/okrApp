@@ -724,6 +724,7 @@
 				CODE_SIGN_ENTITLEMENTS = AppOKR/AppOKR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AppOKR/Preview Content\"";
 				DEVELOPMENT_TEAM = R2479253XF;
 				ENABLE_PREVIEWS = YES;
@@ -751,6 +752,7 @@
 				CODE_SIGN_ENTITLEMENTS = AppOKR/AppOKR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AppOKR/Preview Content\"";
 				DEVELOPMENT_TEAM = R2479253XF;
 				ENABLE_PREVIEWS = YES;
