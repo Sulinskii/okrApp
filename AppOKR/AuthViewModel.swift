@@ -23,6 +23,8 @@ final class AuthViewModel: ObservableObject {
     @Published var inlineErrorForEmail = ""
     @Published var inlineErrorForPassword = ""
     
+    @Published var presentErrorAlert = false
+    
     private var cancellables = Set<AnyCancellable>()
     
     private let auth = Auth.auth()
@@ -107,7 +109,10 @@ final class AuthViewModel: ObservableObject {
 
     public func signIn() {
         auth.signIn(withEmail: email, password: password) { [weak self] result, error in
-            guard result != nil, error == nil else { return }
+            guard result != nil, error == nil else {
+                self?.presentErrorAlert = true
+                return
+            }
             
             DispatchQueue.main.async {
                 self?.signedIn = true
@@ -117,7 +122,11 @@ final class AuthViewModel: ObservableObject {
 
     public func signUp() {
         auth.createUser(withEmail: email, password: password) { [weak self] result, error in
-            guard result != nil, error == nil else { return }
+            guard result != nil, error == nil else {
+                self?.presentErrorAlert = true
+                return
+                
+            }
             
             DispatchQueue.main.async {
                 self?.signedIn = true
@@ -129,5 +138,12 @@ final class AuthViewModel: ObservableObject {
         CoreDataStack.delete()
         try? auth.signOut()
         signedIn = false
+    }
+    
+    public func deleteUser() {
+        auth.currentUser?.delete() { error in
+            guard error == nil else { return }
+            self.signOut()
+        }
     }
 }

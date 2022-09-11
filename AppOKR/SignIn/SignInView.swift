@@ -47,6 +47,14 @@ struct SignInView: View {
                 viewModel.password = ""
                 viewModel.passwordAgain = ""
             }
+            .alert(isPresented: $viewModel.presentErrorAlert) {
+                Alert(title: Text("Error"),
+                      message: Text("Please try again"),
+                      dismissButton: .default(Text("OK"),
+                                              action: {
+                    viewModel.presentErrorAlert = false
+                }))
+            }
         }
     }
 }

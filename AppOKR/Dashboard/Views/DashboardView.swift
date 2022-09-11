@@ -73,7 +73,11 @@ struct DashboardView: View {
                     Button("Sign out") {
                         authViewModel.signOut()
                     }
+                    .padding(.bottom, 20)
                     .accessibilityIdentifier("identifier")
+                    Button("Delete user & sign out") {
+                        authViewModel.deleteUser()
+                    }
                 }
                 .tabItem{ Text("Sign out view") }
             }.navigationBarTitle(Text("Books"))
