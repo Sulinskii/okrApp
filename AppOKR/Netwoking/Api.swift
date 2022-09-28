@@ -37,22 +37,6 @@ final class Api {
     
     func dataPublisher<T: Decodable>(type: T.Type, request: URLRequest) -> AnyPublisher<T, Error> {
         session.dataTaskPublisher(for: request)
-                .handleEvents(receiveSubscription: { subscription in
-                    print("SUBSCRIPTION STARTED: \(subscription)")
-                }, receiveOutput: { data, response in
-                    print("RECEIVED OUTPUT: \(data), \(response)")
-                }, receiveCompletion: { completion in
-                    switch completion {
-                    case .finished:
-                        print("FINISHED")
-                    case .failure(let error):
-                        print("RECEIVED ERROR: \(error)")
-                    }
-                }, receiveCancel: {
-                    print("RECEIVED CANCEL")
-                }, receiveRequest: { request in
-                    print("RECEIVED REQUEST: \(request)")
-                })
                 .tryMap{ try Self.validate($0.data, $0.response)}
                 .decode(type: type, decoder: decoder)
                 .retry(numberOfRetries)
