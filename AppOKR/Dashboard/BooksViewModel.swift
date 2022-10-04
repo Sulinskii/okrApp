@@ -1,12 +1,9 @@
-import Combine
 import Foundation
 import CoreData
 
 final class BooksViewModel: ObservableObject {
-    
     private let api: Api
     private let viewContext: NSManagedObjectContext
-    private var cancellationToken = Set<AnyCancellable>()
     
     @Published var books: [Book] = []
     @Published var podcasts: [Book] = []
@@ -18,29 +15,26 @@ final class BooksViewModel: ObservableObject {
     }
     
     func fetchBooks(quantity: Int) {
-        let booksApiCall = api.fetchBooks(quantity)
-        let podcastsApiCall = api.fetchPodcasts()
-        
-        podcastsApiCall
-            .receive(on: DispatchQueue.main)
-            .flatMap { [weak self] podcasts -> AnyPublisher<ResultData, Error> in
-                self?.podcasts = podcasts.feed.results
-                return booksApiCall
+        Task {
+            do {
+                let booksApiCall = try await api.fetchData(with: .books, quantity: 10)
+                let podcastsApiCall = try await api.fetchData(with: .podcasts, quantity: 10)
+            
+                await updateValues(books: booksApiCall.feed.results,
+                             podcasts: podcastsApiCall.feed.results)
+            } catch {
+                await MainActor.run {
+                    presentAlert = true
+                }
             }
-            .sink(receiveCompletion: { [weak self] completion in
-                switch completion {
-                case .failure(let error):
-                    print("ERROR: \(error)")
-                    self?.presentAlert = true
-                case .finished:
-                    break
-                }
-            }, receiveValue: { [weak self] books in
-                guard let self = self else { return }
-                books.feed.results.forEach { book in
-                    BookObject.save(book: book, inViewContext: self.viewContext)
-                }
-//                    self?.books = books.feed.results
-            }).store(in: &cancellationToken)
+        }
+    }
+    
+    @MainActor
+    private func updateValues(books: [Book], podcasts: [Book]) {
+        books.forEach { book in
+            BookObject.save(book: book, inViewContext: self.viewContext)
+        }
+        self.podcasts = podcasts
     }
 }

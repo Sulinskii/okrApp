@@ -6,12 +6,10 @@
 //
 
 import SwiftUI
-import Combine
 
 struct BookListCell: View {
     let book: BookObject
     let bookDetails: BookDetails
-    var cancellables = Set<AnyCancellable>()
     
     init(book: BookObject) {
         self.book = book
