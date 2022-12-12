@@ -87,6 +87,7 @@ struct DashboardView: View {
                 numberOfBooksToFetch = books.count
             }
             viewModel.fetchBooks(quantity: numberOfBooksToFetch)
+//            viewModel.fetchSpotifyAuthToken()
         }
         .alert(isPresented: $viewModel.presentAlert) {
             Alert(

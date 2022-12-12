@@ -4,6 +4,7 @@ import CoreData
 final class BooksViewModel: ObservableObject {
     private let api: Api
     private let viewContext: NSManagedObjectContext
+    private let spotifyService = SpotifyService()
     
     @Published var books: [Book] = []
     @Published var podcasts: [Book] = []
@@ -27,6 +28,16 @@ final class BooksViewModel: ObservableObject {
                     presentAlert = true
                 }
             }
+        }
+    }
+    
+    func fetchSpotifyAuthToken() {
+        spotifyService.fetchAccessToken { (dictionary, error) in
+            if let error = error {
+                print("SPOTIFY ERROR: \(error)")
+            }
+//            let accessToken = dictionary!["access_token"] as! String
+            print("SPOTIFY ACCESS TOKEN: \(dictionary)")
         }
     }
     

@@ -9,6 +9,13 @@ import Foundation
 import WidgetKit
 
 struct BookDetailsViewModel {
+    
+    private let spotifyService = SpotifyService()
+    
+    func didTapConnect() {
+        spotifyService.connect()
+    }
+    
     func updateWidgetData(with bookName: String) {
         guard let userDefaults = UserDefaults(suiteName: "group.AppOKR") else { return }
         var widgetDictionary = [String: Any]()
