@@ -18,8 +18,8 @@ final class BooksViewModel: ObservableObject {
     func fetchBooks(quantity: Int) {
         Task {
             do {
-                let booksApiCall = try await api.fetchData(with: .books, quantity: 10)
-                let podcastsApiCall = try await api.fetchData(with: .podcasts, quantity: 10)
+                let booksApiCall = try await api.fetchData(with: .books, quantity: quantity)
+                let podcastsApiCall = try await api.fetchData(with: .podcasts, quantity: quantity)
             
                 await updateValues(books: booksApiCall.feed.results,
                              podcasts: podcastsApiCall.feed.results)
