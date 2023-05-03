@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import FirebaseAnalytics
 
 struct DashboardBottomView: View {
     
@@ -17,6 +18,7 @@ struct DashboardBottomView: View {
     var body: some View {
         VStack {
             Button("Fetch next 10 books") {
+                Analytics.logEvent("button_selected", parameters: nil)
                 action()
             }
             

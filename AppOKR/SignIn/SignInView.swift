@@ -49,9 +49,10 @@ struct SignInView: View {
             }
             .alert(isPresented: $viewModel.presentErrorAlert) {
                 Alert(title: Text("Error"),
-                      message: Text("Please try again"),
+                      message: Text(viewModel.errorAlertMessage),
                       dismissButton: .default(Text("OK"),
                                               action: {
+                    viewModel.errorAlertMessage = ""
                     viewModel.presentErrorAlert = false
                 }))
             }

@@ -8,6 +8,7 @@
 import SwiftUI
 import Firebase
 import CoreData
+import FirebaseAnalytics
 
 @main
 struct AppOKRApp: App {
@@ -28,6 +29,8 @@ struct AppOKRApp: App {
 final class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseApp.configure()
+        Firebase.Analytics.setAnalyticsCollectionEnabled(true)
+        Analytics.logEvent("[CUSTOM]_App_started", parameters: ["Works":true])
         return true
     }
 }

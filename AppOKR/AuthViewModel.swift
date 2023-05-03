@@ -23,6 +23,7 @@ final class AuthViewModel: ObservableObject {
     @Published var inlineErrorForEmail = ""
     @Published var inlineErrorForPassword = ""
     
+    @Published var errorAlertMessage: String = ""
     @Published var presentErrorAlert = false
     
     private var cancellables = Set<AnyCancellable>()
@@ -30,6 +31,7 @@ final class AuthViewModel: ObservableObject {
     private let auth = Auth.auth()
     private let emailPredicate = NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
     private let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$")
+    private let defaultErrorMessage = "Please try again"
     
     private var isEmailValidPublisher: AnyPublisher<EmailStatus, Never> {
         $email
@@ -109,27 +111,31 @@ final class AuthViewModel: ObservableObject {
 
     public func signIn() {
         auth.signIn(withEmail: email, password: password) { [weak self] result, error in
+            guard let self = self else { return }
             guard result != nil, error == nil else {
-                self?.presentErrorAlert = true
+                self.errorAlertMessage = error?.localizedDescription ?? self.defaultErrorMessage
+                self.presentErrorAlert = true
                 return
             }
             
             DispatchQueue.main.async {
-                self?.signedIn = true
+                self.signedIn = true
             }
         }
     }
 
     public func signUp() {
         auth.createUser(withEmail: email, password: password) { [weak self] result, error in
+            guard let self = self else { return }
             guard result != nil, error == nil else {
-                self?.presentErrorAlert = true
+                self.errorAlertMessage = error?.localizedDescription ?? self.defaultErrorMessage
+                self.presentErrorAlert = true
                 return
                 
             }
             
             DispatchQueue.main.async {
-                self?.signedIn = true
+                self.signedIn = true
             }
         }
     }
