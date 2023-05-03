@@ -30,7 +30,7 @@ final class AuthViewModel: ObservableObject {
     
     private let auth = Auth.auth()
     private let emailPredicate = NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
-    private let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[0-9])(?=.*[A-Z]).{6,}$")
+    private let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$")
     private let defaultErrorMessage = "Please try again"
     
     private var isEmailValidPublisher: AnyPublisher<EmailStatus, Never> {
