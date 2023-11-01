@@ -38,16 +38,6 @@ final class BooksViewModel: ObservableObject {
         }
     }
     
-    func fetchSpotifyAuthToken() {
-        spotifyService.fetchAccessToken { (dictionary, error) in
-            if let error = error {
-                print("SPOTIFY ERROR: \(error)")
-            }
-//            let accessToken = dictionary!["access_token"] as! String
-            print("SPOTIFY ACCESS TOKEN: \(dictionary)")
-        }
-    }
-    
     @MainActor
     private func updateValues(books: [Book], podcasts: [Book]) {
         let collection = db.collection(booksCollectionName)
