@@ -22,7 +22,6 @@
 		689710EA276F7D7B00C1F785 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689710E9276F7D7B00C1F785 /* Author.swift */; };
 		689710EC276F7DAB00C1F785 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689710EB276F7DAB00C1F785 /* Link.swift */; };
 		7517FFD027DE515B00A884BD /* CodableDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7517FFCF27DE515B00A884BD /* CodableDefault.swift */; };
-		7530DD7F290042B3009466B3 /* SpotifyiOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7530DD7E290042B3009466B3 /* SpotifyiOS.xcframework */; };
 		7530DD80290042B3009466B3 /* SpotifyiOS.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7530DD7E290042B3009466B3 /* SpotifyiOS.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		753EF3CD27EA66E3001224CA /* PasswordStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753EF3CC27EA66E3001224CA /* PasswordStatus.swift */; };
 		7564115C28285B83008F3B2A /* BooksList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7564115A28285B83008F3B2A /* BooksList.xcdatamodeld */; };
@@ -46,7 +45,6 @@
 		758026F327E78FF100910A2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 758026F227E78FF000910A2F /* GoogleService-Info.plist */; };
 		758026FA27E7AC3C00910A2F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026F927E7AC3C00910A2F /* DashboardView.swift */; };
 		758026FF27E7AF4A00910A2F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758026FE27E7AF4A00910A2F /* SignUpView.swift */; };
-		75AB2EFF28FEEFDA00D3384F /* SpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AB2EFE28FEEFDA00D3384F /* SpotifyService.swift */; };
 		75F45762277F22DF005D16B3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F45761277F22DF005D16B3 /* Book.swift */; };
 		75F45764277F2363005D16B3 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F45763277F2363005D16B3 /* Genre.swift */; };
 		75F457662781E205005D16B3 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F457652781E205005D16B3 /* BooksViewModel.swift */; };
@@ -149,7 +147,6 @@
 		758026F227E78FF000910A2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		758026F927E7AC3C00910A2F /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		758026FE27E7AF4A00910A2F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		75AB2EFE28FEEFDA00D3384F /* SpotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyService.swift; sourceTree = "<group>"; };
 		75AB2F0828FF026F00D3384F /* AppOKR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppOKR-Bridging-Header.h"; sourceTree = "<group>"; };
 		75F45761277F22DF005D16B3 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		75F45763277F2363005D16B3 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
@@ -280,7 +277,6 @@
 				689710DE276F738E00C1F785 /* RequestProvider.swift */,
 				689710E0276F754F00C1F785 /* ApiError.swift */,
 				689710E2276F75D700C1F785 /* Api.swift */,
-				75AB2EFE28FEEFDA00D3384F /* SpotifyService.swift */,
 			);
 			path = Netwoking;
 			sourceTree = "<group>";
@@ -560,7 +556,6 @@
 				75F45764277F2363005D16B3 /* Genre.swift in Sources */,
 				75641160282979B1008F3B2A /* DashboardBottomView.swift in Sources */,
 				7564115C28285B83008F3B2A /* BooksList.xcdatamodeld in Sources */,
-				75AB2EFF28FEEFDA00D3384F /* SpotifyService.swift in Sources */,
 				758026FF27E7AF4A00910A2F /* SignUpView.swift in Sources */,
 				75F45762277F22DF005D16B3 /* Book.swift in Sources */,
 				689710EA276F7D7B00C1F785 /* Author.swift in Sources */,
