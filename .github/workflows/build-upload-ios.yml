@@ -6,8 +6,9 @@ on:
  
 jobs:
  deploy:
-   runs-on: macos-latest
-   steps:
+    runs-on: macos-latest
+    
+    steps:
      - uses: actions/checkout@v2
  
      - name: Set up ruby env
