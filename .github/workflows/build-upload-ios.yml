@@ -25,6 +25,7 @@ jobs:
           ASC_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
           SIGNING_KEY_PASSWORD: ${{ secrets.IOS_DIST_SIGNING_KEY_PASSWORD }}
           SIGNING_KEY_FILE_PATH: signing-cert.p12
+          MATCH_GIT_PRIVATE_KEY: ${{ secrets.MATCH_GIT_PRIVATE_KEY }}
       - name: Upload app-store ipa and dsyms to artifacts
         uses: actions/upload-artifact@v2
         with:
