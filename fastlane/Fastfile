@@ -137,9 +137,18 @@ platform :ios do
   desc "Build and upload to TestFlight"
    lane :build_upload_testflight do
      load_asc_api_key
-     prepare_signing
-     fetch_and_increment_build_number
-     build_release
-     upload_release
+     
+     setup_ci(
+      provider: "okrApp",
+      timeout: 1200
+    )
+
+    match(type: 'appstore')
+    build_app(scheme: "AppOKR")
+    upload_to_testflight
+
+    #  fetch_and_increment_build_numbermatch(type: 'appstore')
+    #  build_release
+    #  upload_release
    end
 end
