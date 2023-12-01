@@ -22,7 +22,7 @@ struct BookDetails: View {
     var body: some View {
         Text("Release date: \(book.releaseDate ?? "")")
         Button("Connect") {
-            viewModel.didTapConnect()
+//            viewModel.didTapConnect()
         }
         
 //        Button("Do action") {
