@@ -16,6 +16,11 @@
 default_platform(:ios)
 
 platform :ios do
+
+  before_all do
+    ENV["FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT"] = "120"
+  end
+
   desc "Push a new beta build to TestFlight"
   lane :beta do
     increment_build_number(xcodeproj: "AppOKR.xcodeproj")
