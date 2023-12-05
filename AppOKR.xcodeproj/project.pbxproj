@@ -903,9 +903,11 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = AppOKRWidgetExtension.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = R2479253XF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppOKRWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AppOKRWidget;
@@ -920,6 +922,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.appokr.AppOKR.AppOKRWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development com.appokr.AppOKR.AppOKRWidget";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -934,9 +937,11 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = AppOKRWidgetExtension.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = R2479253XF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppOKRWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AppOKRWidget;
@@ -951,6 +956,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.appokr.AppOKR.AppOKRWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development com.appokr.AppOKR.AppOKRWidget";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
