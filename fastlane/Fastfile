@@ -145,7 +145,13 @@ platform :ios do
       setup_ci
       match(type: 'appstore', app_identifier: 'com.appokr.AppOKR', readonly: false)
       match(type: 'appstore', app_identifier: 'com.appokr.AppOKR.AppOKRWidget', readonly: false)
-      build_app(scheme: "AppOKR")
+      build_app(scheme: "AppOKR",
+       export_options: {
+        provisioningProfiles: {
+          'com.appokr.AppOKR' => 'AppStore_com.appokr.AppOKR',
+          'com.appokr.AppOKR.AppOKRWidget' => 'AppStore_com.appokr.AppOKR.AppOKRWidget'
+      }
+  })
       upload_to_testflight
 
     #  fetch_and_increment_build_numbermatch(type: 'appstore')
