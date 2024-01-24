@@ -39,7 +39,7 @@
 			<string>com.appokr.AppOKR</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>http://appokr.com</string>
+				<string>appokr</string>
 			</array>
 		</dict>
 	</array>
