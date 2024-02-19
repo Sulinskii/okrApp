@@ -1,0 +1,2918 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreData",
+        "printedName": "CoreData",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreData",
+        "printedName": "CoreData",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "KeyChainQuery",
+        "printedName": "KeyChainQuery",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "query",
+            "printedName": "query",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AliveCorKitLite13KeyChainQueryP5querySDySSypGSgvp",
+            "mangledName": "$s15AliveCorKitLite13KeyChainQueryP5querySDySSypGSgvp",
+            "moduleName": "AliveCorKitLite",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AliveCorKitLite13KeyChainQueryP5querySDySSypGSgvg",
+                "mangledName": "$s15AliveCorKitLite13KeyChainQueryP5querySDySSypGSgvg",
+                "moduleName": "AliveCorKitLite",
+                "genericSig": "<τ_0_0 where τ_0_0 : AliveCorKitLite.KeyChainQuery>",
+                "sugared_genericSig": "<Self where Self : AliveCorKitLite.KeyChainQuery>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:15AliveCorKitLite13KeyChainQueryP",
+        "mangledName": "$s15AliveCorKitLite13KeyChainQueryP",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TokenQuery",
+        "printedName": "TokenQuery",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "query",
+            "printedName": "query",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AliveCorKitLite10TokenQueryV5querySDySSypGSgvp",
+            "mangledName": "$s15AliveCorKitLite10TokenQueryV5querySDySSypGSgvp",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AliveCorKitLite10TokenQueryV5querySDySSypGSgvg",
+                "mangledName": "$s15AliveCorKitLite10TokenQueryV5querySDySSypGSgvg",
+                "moduleName": "AliveCorKitLite",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:15AliveCorKitLite10TokenQueryV",
+        "mangledName": "$s15AliveCorKitLite10TokenQueryV",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "KeyChainQuery",
+            "printedName": "KeyChainQuery",
+            "usr": "s:15AliveCorKitLite13KeyChainQueryP",
+            "mangledName": "$s15AliveCorKitLite13KeyChainQueryP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SecurityManager",
+        "printedName": "SecurityManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sharedInstance",
+            "printedName": "sharedInstance",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SecurityManager",
+                "printedName": "AliveCorKitLite.SecurityManager",
+                "usr": "c:@M@AliveCorKitLite@objc(cs)SecurityManager"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)SecurityManager(cpy)sharedInstance",
+            "mangledName": "$s15AliveCorKitLite15SecurityManagerC14sharedInstanceACvpZ",
+            "moduleName": "AliveCorKitLite",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecurityManager",
+                    "printedName": "AliveCorKitLite.SecurityManager",
+                    "usr": "c:@M@AliveCorKitLite@objc(cs)SecurityManager"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AliveCorKitLite@objc(cs)SecurityManager(cm)sharedInstance",
+                "mangledName": "$s15AliveCorKitLite15SecurityManagerC14sharedInstanceACvgZ",
+                "moduleName": "AliveCorKitLite",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "isValid",
+            "printedName": "isValid()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)SecurityManager(im)isValid",
+            "mangledName": "$s15AliveCorKitLite15SecurityManagerC7isValidSbyF",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SecurityManager",
+                "printedName": "AliveCorKitLite.SecurityManager",
+                "usr": "c:@M@AliveCorKitLite@objc(cs)SecurityManager"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)SecurityManager(im)init",
+            "mangledName": "$s15AliveCorKitLite15SecurityManagerCACycfc",
+            "moduleName": "AliveCorKitLite",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AliveCorKitLite@objc(cs)SecurityManager",
+        "mangledName": "$s15AliveCorKitLite15SecurityManagerC",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreData",
+        "printedName": "CoreData",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Event",
+        "printedName": "Event",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(entity:insertInto:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Event",
+                "printedName": "AliveCorKitLite.Event",
+                "usr": "c:@M@AliveCorKitLite@objc(cs)Event"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSEntityDescription",
+                "printedName": "CoreData.NSEntityDescription",
+                "usr": "c:objc(cs)NSEntityDescription"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreData.NSManagedObjectContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSManagedObjectContext",
+                    "printedName": "CoreData.NSManagedObjectContext",
+                    "usr": "c:objc(cs)NSManagedObjectContext"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)Event(im)initWithEntity:insertIntoManagedObjectContext:",
+            "mangledName": "$s15AliveCorKitLite5EventC6entity10insertIntoACSo19NSEntityDescriptionC_So22NSManagedObjectContextCSgtcfc",
+            "moduleName": "AliveCorKitLite",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithEntity:insertIntoManagedObjectContext:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "fetchRequest",
+            "printedName": "fetchRequest()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSFetchRequest",
+                "printedName": "CoreData.NSFetchRequest<AliveCorKitLite.Event>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Event",
+                    "printedName": "AliveCorKitLite.Event",
+                    "usr": "c:@M@AliveCorKitLite@objc(cs)Event"
+                  }
+                ],
+                "usr": "c:objc(cs)NSFetchRequest"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15AliveCorKitLite5EventC12fetchRequestSo07NSFetchG0CyACGyFZ",
+            "mangledName": "$s15AliveCorKitLite5EventC12fetchRequestSo07NSFetchG0CyACGyFZ",
+            "moduleName": "AliveCorKitLite",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "NonObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "clientId",
+            "printedName": "clientId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@AliveCorKitLite@objc(cs)Event(py)clientId",
+            "mangledName": "$s15AliveCorKitLite5EventC8clientIdSSSgvp",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AliveCorKitLite@objc(cs)Event(im)clientId",
+                "mangledName": "$s15AliveCorKitLite5EventC8clientIdSSSgvg",
+                "moduleName": "AliveCorKitLite",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AliveCorKitLite@objc(cs)Event(im)setClientId:",
+                "mangledName": "$s15AliveCorKitLite5EventC8clientIdSSSgvs",
+                "moduleName": "AliveCorKitLite",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "event",
+            "printedName": "event",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@AliveCorKitLite@objc(cs)Event(py)event",
+            "mangledName": "$s15AliveCorKitLite5EventC5eventSSSgvp",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AliveCorKitLite@objc(cs)Event(im)event",
+                "mangledName": "$s15AliveCorKitLite5EventC5eventSSSgvg",
+                "moduleName": "AliveCorKitLite",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AliveCorKitLite@objc(cs)Event(im)setEvent:",
+                "mangledName": "$s15AliveCorKitLite5EventC5eventSSSgvs",
+                "moduleName": "AliveCorKitLite",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "recordedAt",
+            "printedName": "recordedAt",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@AliveCorKitLite@objc(cs)Event(py)recordedAt",
+            "mangledName": "$s15AliveCorKitLite5EventC10recordedAt10Foundation4DateVSgvp",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AliveCorKitLite@objc(cs)Event(im)recordedAt",
+                "mangledName": "$s15AliveCorKitLite5EventC10recordedAt10Foundation4DateVSgvg",
+                "moduleName": "AliveCorKitLite",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AliveCorKitLite@objc(cs)Event(im)setRecordedAt:",
+                "mangledName": "$s15AliveCorKitLite5EventC10recordedAt10Foundation4DateVSgvs",
+                "moduleName": "AliveCorKitLite",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "recordedAtOffset",
+            "printedName": "recordedAtOffset",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@AliveCorKitLite@objc(cs)Event(py)recordedAtOffset",
+            "mangledName": "$s15AliveCorKitLite5EventC16recordedAtOffsets5Int64Vvp",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AliveCorKitLite@objc(cs)Event(im)recordedAtOffset",
+                "mangledName": "$s15AliveCorKitLite5EventC16recordedAtOffsets5Int64Vvg",
+                "moduleName": "AliveCorKitLite",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AliveCorKitLite@objc(cs)Event(im)setRecordedAtOffset:",
+                "mangledName": "$s15AliveCorKitLite5EventC16recordedAtOffsets5Int64Vvs",
+                "moduleName": "AliveCorKitLite",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "needsUpload",
+            "printedName": "needsUpload",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@AliveCorKitLite@objc(cs)Event(py)needsUpload",
+            "mangledName": "$s15AliveCorKitLite5EventC11needsUploadSbvp",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "NSManaged",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AliveCorKitLite@objc(cs)Event(im)needsUpload",
+                "mangledName": "$s15AliveCorKitLite5EventC11needsUploadSbvg",
+                "moduleName": "AliveCorKitLite",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AliveCorKitLite@objc(cs)Event(im)setNeedsUpload:",
+                "mangledName": "$s15AliveCorKitLite5EventC11needsUploadSbvs",
+                "moduleName": "AliveCorKitLite",
+                "implicit": true,
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AliveCorKitLite@objc(cs)Event",
+        "mangledName": "$s15AliveCorKitLite5EventC",
+        "moduleName": "AliveCorKitLite",
+        "objc_name": "Event",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSManagedObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "CoreData.NSManagedObject",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ObservableObject",
+            "printedName": "ObservableObject",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ObjectWillChangePublisher",
+                "printedName": "ObjectWillChangePublisher",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObservableObjectPublisher",
+                    "printedName": "Combine.ObservableObjectPublisher",
+                    "usr": "s:7Combine25ObservableObjectPublisherC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7Combine16ObservableObjectP",
+            "mangledName": "$s7Combine16ObservableObjectP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreData",
+        "printedName": "CoreData",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EventManager",
+        "printedName": "EventManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "recordingEvent",
+            "printedName": "recordingEvent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AliveCorKitLite12EventManagerC09recordingE0SSvpZ",
+            "mangledName": "$s15AliveCorKitLite12EventManagerC09recordingE0SSvpZ",
+            "moduleName": "AliveCorKitLite",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AliveCorKitLite12EventManagerC09recordingE0SSvgZ",
+                "mangledName": "$s15AliveCorKitLite12EventManagerC09recordingE0SSvgZ",
+                "moduleName": "AliveCorKitLite",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "evaluationEvent",
+            "printedName": "evaluationEvent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15AliveCorKitLite12EventManagerC010evaluationE0SSvpZ",
+            "mangledName": "$s15AliveCorKitLite12EventManagerC010evaluationE0SSvpZ",
+            "moduleName": "AliveCorKitLite",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15AliveCorKitLite12EventManagerC010evaluationE0SSvgZ",
+                "mangledName": "$s15AliveCorKitLite12EventManagerC010evaluationE0SSvgZ",
+                "moduleName": "AliveCorKitLite",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sharedInstance",
+            "printedName": "sharedInstance",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EventManager",
+                "printedName": "AliveCorKitLite.EventManager",
+                "usr": "c:@M@AliveCorKitLite@objc(cs)EventManager"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)EventManager(cpy)sharedInstance",
+            "mangledName": "$s15AliveCorKitLite12EventManagerC14sharedInstanceACvpZ",
+            "moduleName": "AliveCorKitLite",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventManager",
+                    "printedName": "AliveCorKitLite.EventManager",
+                    "usr": "c:@M@AliveCorKitLite@objc(cs)EventManager"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AliveCorKitLite@objc(cs)EventManager(cm)sharedInstance",
+                "mangledName": "$s15AliveCorKitLite12EventManagerC14sharedInstanceACvgZ",
+                "moduleName": "AliveCorKitLite",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "logEvent",
+            "printedName": "logEvent(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)EventManager(im)logEvent:",
+            "mangledName": "$s15AliveCorKitLite12EventManagerC03logE0yySSF",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logDebugEvent",
+            "printedName": "logDebugEvent(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)EventManager(im)logDebugEvent:",
+            "mangledName": "$s15AliveCorKitLite12EventManagerC08logDebugE0yySSF",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AliveCorKitLite@objc(cs)EventManager",
+        "mangledName": "$s15AliveCorKitLite12EventManagerC",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ACKEventBridge",
+        "printedName": "ACKEventBridge",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "recording",
+            "printedName": "recording()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSString",
+                "printedName": "Foundation.NSString",
+                "usr": "c:objc(cs)NSString"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)ACKEventBridge(cm)recording",
+            "mangledName": "$s15AliveCorKitLite14ACKEventBridgeC9recordingSo8NSStringCyFZ",
+            "moduleName": "AliveCorKitLite",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "evaluation",
+            "printedName": "evaluation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSString",
+                "printedName": "Foundation.NSString",
+                "usr": "c:objc(cs)NSString"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)ACKEventBridge(cm)evaluation",
+            "mangledName": "$s15AliveCorKitLite14ACKEventBridgeC10evaluationSo8NSStringCyFZ",
+            "moduleName": "AliveCorKitLite",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ACKEventBridge",
+                "printedName": "AliveCorKitLite.ACKEventBridge",
+                "usr": "c:@M@AliveCorKitLite@objc(cs)ACKEventBridge"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)ACKEventBridge(im)init",
+            "mangledName": "$s15AliveCorKitLite14ACKEventBridgeCACycfc",
+            "moduleName": "AliveCorKitLite",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AliveCorKitLite@objc(cs)ACKEventBridge",
+        "mangledName": "$s15AliveCorKitLite14ACKEventBridgeC",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreData",
+        "printedName": "CoreData",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DataManager",
+        "printedName": "DataManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sharedInstance",
+            "printedName": "sharedInstance",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DataManager",
+                "printedName": "AliveCorKitLite.DataManager",
+                "usr": "c:@M@AliveCorKitLite@objc(cs)DataManager"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)DataManager(cpy)sharedInstance",
+            "mangledName": "$s15AliveCorKitLite11DataManagerC14sharedInstanceACvpZ",
+            "moduleName": "AliveCorKitLite",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DataManager",
+                    "printedName": "AliveCorKitLite.DataManager",
+                    "usr": "c:@M@AliveCorKitLite@objc(cs)DataManager"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AliveCorKitLite@objc(cs)DataManager(cm)sharedInstance",
+                "mangledName": "$s15AliveCorKitLite11DataManagerC14sharedInstanceACvgZ",
+                "moduleName": "AliveCorKitLite",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setDebugMode",
+            "printedName": "setDebugMode(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)DataManager(im)setDebugMode:",
+            "mangledName": "$s15AliveCorKitLite11DataManagerC12setDebugModeyySbF",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "saveJwt",
+            "printedName": "saveJwt(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)DataManager(im)saveJwt:",
+            "mangledName": "$s15AliveCorKitLite11DataManagerC7saveJwtyySSF",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getJwt",
+            "printedName": "getJwt()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)DataManager(im)getJwt",
+            "mangledName": "$s15AliveCorKitLite11DataManagerC6getJwtSSSgyF",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getConfiguration",
+            "printedName": "getConfiguration()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AliveCorKitLite.ACKConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ACKConfiguration",
+                    "printedName": "AliveCorKitLite.ACKConfiguration",
+                    "usr": "c:objc(cs)ACKConfiguration"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)DataManager(im)getConfiguration",
+            "mangledName": "$s15AliveCorKitLite11DataManagerC16getConfigurationSo16ACKConfigurationCSgyF",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "authSDK",
+            "printedName": "authSDK(token:version:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Foundation.NSError?, Foundation.NSDictionary?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Foundation.NSError?, Foundation.NSDictionary?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.NSError?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NSError",
+                            "printedName": "Foundation.NSError",
+                            "usr": "c:objc(cs)NSError"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.NSDictionary?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NSDictionary",
+                            "printedName": "Foundation.NSDictionary",
+                            "usr": "c:objc(cs)NSDictionary"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)DataManager(im)authSDKWithToken:version:completion:",
+            "mangledName": "$s15AliveCorKitLite11DataManagerC7authSDK5token7version10completionySSSg_AHySo7NSErrorCSg_So12NSDictionaryCSgtctF",
+            "moduleName": "AliveCorKitLite",
+            "objc_name": "authSDKWithToken:version:completion:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "uploadEvents",
+            "printedName": "uploadEvents()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AliveCorKitLite@objc(cs)DataManager(im)uploadEvents",
+            "mangledName": "$s15AliveCorKitLite11DataManagerC12uploadEventsyyF",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AliveCorKitLite@objc(cs)DataManager",
+        "mangledName": "$s15AliveCorKitLite11DataManagerC",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreData",
+        "printedName": "CoreData",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreData",
+        "printedName": "CoreData",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreData",
+        "printedName": "CoreData",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AliveCorKitLite",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DateFormatter",
+        "printedName": "DateFormatter",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "rfc3339WithSubSecondsDateFormatter",
+            "printedName": "rfc3339WithSubSecondsDateFormatter",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DateFormatter",
+                "printedName": "Foundation.DateFormatter",
+                "usr": "c:objc(cs)NSDateFormatter"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@AliveCorKitLite@@objc(cs)NSDateFormatter(cpy)rfc3339WithSubSecondsDateFormatter",
+            "mangledName": "$sSo15NSDateFormatterC15AliveCorKitLiteE025rfc3339WithSubSecondsDateB0ABvpZ",
+            "moduleName": "AliveCorKitLite",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DateFormatter",
+                    "printedName": "Foundation.DateFormatter",
+                    "usr": "c:objc(cs)NSDateFormatter"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AliveCorKitLite@@objc(cs)NSDateFormatter(cm)rfc3339WithSubSecondsDateFormatter",
+                "mangledName": "$sSo15NSDateFormatterC15AliveCorKitLiteE025rfc3339WithSubSecondsDateB0ABvgZ",
+                "moduleName": "AliveCorKitLite",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC",
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rfc3339DateFormatter",
+            "printedName": "rfc3339DateFormatter",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DateFormatter",
+                "printedName": "Foundation.DateFormatter",
+                "usr": "c:objc(cs)NSDateFormatter"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@AliveCorKitLite@@objc(cs)NSDateFormatter(cpy)rfc3339DateFormatter",
+            "mangledName": "$sSo15NSDateFormatterC15AliveCorKitLiteE011rfc3339DateB0ABvpZ",
+            "moduleName": "AliveCorKitLite",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DateFormatter",
+                    "printedName": "Foundation.DateFormatter",
+                    "usr": "c:objc(cs)NSDateFormatter"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AliveCorKitLite@@objc(cs)NSDateFormatter(cm)rfc3339DateFormatter",
+                "mangledName": "$sSo15NSDateFormatterC15AliveCorKitLiteE011rfc3339DateB0ABvgZ",
+                "moduleName": "AliveCorKitLite",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC",
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSDateFormatter",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "objc_name": "NSDateFormatter",
+        "declAttributes": [
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSFormatter",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "Foundation.Formatter",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Date",
+        "printedName": "Date",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "toRfc3339WithSubSecondsString",
+            "printedName": "toRfc3339WithSubSecondsString()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Foundation4DateV15AliveCorKitLiteE29toRfc3339WithSubSecondsStringSSyF",
+            "mangledName": "$s10Foundation4DateV15AliveCorKitLiteE29toRfc3339WithSubSecondsStringSSyF",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "toRfc3339String",
+            "printedName": "toRfc3339String()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Foundation4DateV15AliveCorKitLiteE15toRfc3339StringSSyF",
+            "mangledName": "$s10Foundation4DateV15AliveCorKitLiteE15toRfc3339StringSSyF",
+            "moduleName": "AliveCorKitLite",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10Foundation4DateV",
+        "mangledName": "$s10Foundation4DateV",
+        "moduleName": "Foundation",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ReferenceConvertible",
+            "printedName": "ReferenceConvertible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReferenceType",
+                "printedName": "ReferenceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSDate",
+                    "printedName": "Foundation.NSDate",
+                    "usr": "c:objc(cs)NSDate"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation20ReferenceConvertibleP",
+            "mangledName": "$s10Foundation20ReferenceConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Comparable",
+            "printedName": "Comparable",
+            "usr": "s:SL",
+            "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Strideable",
+            "printedName": "Strideable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Stride",
+                "printedName": "Stride",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sx",
+            "mangledName": "$sSx"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSDate",
+                    "printedName": "Foundation.NSDate",
+                    "usr": "c:objc(cs)NSDate"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_CustomPlaygroundQuickLookable",
+            "printedName": "_CustomPlaygroundQuickLookable",
+            "usr": "s:s30_CustomPlaygroundQuickLookableP",
+            "mangledName": "$ss30_CustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CodingUserInfoKey",
+        "printedName": "CodingUserInfoKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "moc",
+            "printedName": "moc",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.CodingUserInfoKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CodingUserInfoKey",
+                    "printedName": "Swift.CodingUserInfoKey",
+                    "usr": "s:s17CodingUserInfoKeyV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:s17CodingUserInfoKeyV15AliveCorKitLiteE3mocABSgvpZ",
+            "mangledName": "$ss17CodingUserInfoKeyV15AliveCorKitLiteE3mocABSgvpZ",
+            "moduleName": "AliveCorKitLite",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.CodingUserInfoKey?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingUserInfoKey",
+                        "printedName": "Swift.CodingUserInfoKey",
+                        "usr": "s:s17CodingUserInfoKeyV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:s17CodingUserInfoKeyV15AliveCorKitLiteE3mocABSgvgZ",
+                "mangledName": "$ss17CodingUserInfoKeyV15AliveCorKitLiteE3mocABSgvgZ",
+                "moduleName": "AliveCorKitLite",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:s17CodingUserInfoKeyV",
+        "mangledName": "$ss17CodingUserInfoKeyV",
+        "moduleName": "Swift",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Networking\/SdkClientModel.swift",
+      "kind": "StringLiteral",
+      "offset": 398,
+      "length": 12,
+      "value": "\"expiration\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Networking\/SdkClientModel.swift",
+      "kind": "StringLiteral",
+      "offset": 445,
+      "length": 27,
+      "value": "\"partnerPhoneHomeFrequency\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Networking\/SdkClientModel.swift",
+      "kind": "StringLiteral",
+      "offset": 398,
+      "length": 12,
+      "value": "\"expiration\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Networking\/SdkClientModel.swift",
+      "kind": "StringLiteral",
+      "offset": 445,
+      "length": 27,
+      "value": "\"partnerPhoneHomeFrequency\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Networking\/HttpRequestManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 308,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Persistence\/CoreDataManager.swift",
+      "kind": "StringLiteral",
+      "offset": 382,
+      "length": 9,
+      "value": "\"ACK-SDK\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Persistence\/CoreDataManager.swift",
+      "kind": "StringLiteral",
+      "offset": 518,
+      "length": 44,
+      "value": "\"Unable to load persistent stores: \""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Persistence\/CoreDataManager.swift",
+      "kind": "StringLiteral",
+      "offset": 561,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 254,
+      "length": 15,
+      "value": "\"ecg_recording\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 310,
+      "length": 16,
+      "value": "\"ecg_evaluation\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Persistence\/DataManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3958,
+      "length": 23,
+      "value": "\"com.ackit.eventsQueue\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Persistence\/DataManager.swift",
+      "kind": "StringLiteral",
+      "offset": 4065,
+      "length": 29,
+      "value": "\"com.ackit.eventsUploadQueue\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/DateFormatter+Util.swift",
+      "kind": "StringLiteral",
+      "offset": 378,
+      "length": 13,
+      "value": "\"en_US_POSIX\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/DateFormatter+Util.swift",
+      "kind": "StringLiteral",
+      "offset": 427,
+      "length": 43,
+      "value": "\"yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSSSSSXXXXX\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/DateFormatter+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 533,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/DateFormatter+Util.swift",
+      "kind": "StringLiteral",
+      "offset": 749,
+      "length": 13,
+      "value": "\"en_US_POSIX\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/DateFormatter+Util.swift",
+      "kind": "StringLiteral",
+      "offset": 798,
+      "length": 36,
+      "value": "\"yyyy'-'MM'-'dd'T'HH':'mm':'ssXXXXX\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/DateFormatter+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 897,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/CodingUserInfoKey+Util.swift",
+      "kind": "StringLiteral",
+      "offset": 268,
+      "length": 22,
+      "value": "\"managedObjectContext\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/NSError+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 241,
+      "length": 4,
+      "value": "1000"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/NSError+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 267,
+      "length": 4,
+      "value": "1001"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/NSError+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 298,
+      "length": 4,
+      "value": "1002"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/NSError+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 325,
+      "length": 4,
+      "value": "1003"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/NSError+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 349,
+      "length": 4,
+      "value": "1004"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/NSError+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 241,
+      "length": 4,
+      "value": "1000"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/NSError+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 267,
+      "length": 4,
+      "value": "1001"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/NSError+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 298,
+      "length": 4,
+      "value": "1002"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/NSError+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 325,
+      "length": 4,
+      "value": "1003"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/NSError+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 349,
+      "length": 4,
+      "value": "1004"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/NSError+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 241,
+      "length": 4,
+      "value": "1000"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/NSError+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 267,
+      "length": 4,
+      "value": "1001"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/NSError+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 298,
+      "length": 4,
+      "value": "1002"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/NSError+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 325,
+      "length": 4,
+      "value": "1003"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Common\/NSError+Util.swift",
+      "kind": "IntegerLiteral",
+      "offset": 349,
+      "length": 4,
+      "value": "1004"
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Networking\/HttpRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 213,
+      "length": 5,
+      "value": "\"GET\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Networking\/HttpRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 235,
+      "length": 6,
+      "value": "\"POST\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Networking\/HttpRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 213,
+      "length": 5,
+      "value": "\"GET\""
+    },
+    {
+      "filePath": "\/Users\/rex\/dev\/Alivecor\/ACKit-iOS\/AliveCorKitLite\/Networking\/HttpRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 235,
+      "length": 6,
+      "value": "\"POST\""
+    }
+  ]
+}
